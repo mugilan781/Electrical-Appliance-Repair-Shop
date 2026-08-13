@@ -214,9 +214,9 @@ class BookingForm {
             What happens next?
           </div>
           <ul style="color:var(--text-secondary);list-style:none;padding:0;margin:0">
-            <li style="padding:0.3rem 0;display:flex;gap:0.5rem"><span>📞</span> We'll call you to confirm the appointment</li>
-            <li style="padding:0.3rem 0;display:flex;gap:0.5rem"><span>🔧</span> Our technician will visit at the scheduled time</li>
-            <li style="padding:0.3rem 0;display:flex;gap:0.5rem"><span>✅</span> Repair completed with 30-day warranty</li>
+            <li style="padding:0.3rem 0;display:flex;gap:0.5rem"><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.125em;flex-shrink:0" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 8 8l1.8-1.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 24 17z"/></svg></span> We'll call you to confirm the appointment</li>
+            <li style="padding:0.3rem 0;display:flex;gap:0.5rem"><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.125em;flex-shrink:0" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span> Our technician will visit at the scheduled time</li>
+            <li style="padding:0.3rem 0;display:flex;gap:0.5rem"><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.125em;flex-shrink:0" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span> Repair completed with 30-day warranty</li>
           </ul>
         </div>
         <a href="index.html" class="btn btn-primary">
@@ -313,7 +313,7 @@ class NewsletterForm {
         if (btn) { btn.textContent = 'Subscribing...'; btn.disabled = true; }
 
         setTimeout(() => {
-          window.AppHelpers?.showToast('Subscribed successfully! Welcome aboard! 🎉');
+          window.AppHelpers?.showToast('Subscribed successfully! Welcome aboard! <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.125em;flex-shrink:0" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3z"/></svg>');
           input.value = '';
           if (btn) { btn.textContent = 'Subscribe'; btn.disabled = false; }
         }, 1200);
