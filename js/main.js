@@ -38,8 +38,11 @@ function initPreloader() {
   }
 
   const fill = preloader.querySelector('.preloader-fill');
+  // Homepage only: waits for the first hero image to load before finishing
+  const heroReady = window.__fmHeroReady;
   let progress = 0;
   let hidden = false;
+  let heroDone = false;
 
   function hidePreloader() {
     if (hidden) return;
@@ -52,13 +55,27 @@ function initPreloader() {
   document.body.style.overflow = 'hidden';
 
   const interval = setInterval(() => {
-    progress += Math.random() * 20;
-    if (progress >= 100) {
-      progress = 100;
-      setTimeout(hidePreloader, 300);
+    // Hold the bar near full until the homepage hero image is ready
+    if (heroReady && !heroDone) {
+      progress = Math.min(progress + Math.random() * 12, 90);
+    } else {
+      progress += Math.random() * 20;
+      if (progress >= 100) {
+        progress = 100;
+        setTimeout(hidePreloader, 300);
+      }
     }
     if (fill) fill.style.width = progress + '%';
   }, 120);
+
+  // Finish as soon as the homepage hero image is loaded
+  if (heroReady) {
+    heroReady.then(() => {
+      heroDone = true;
+      if (fill) fill.style.width = '100%';
+      setTimeout(hidePreloader, 250);
+    });
+  }
 
   // Safety: never leave the preloader visible too long
   setTimeout(hidePreloader, 3000);

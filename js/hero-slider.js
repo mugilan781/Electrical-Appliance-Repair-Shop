@@ -39,8 +39,11 @@ class HeroSlider {
   }
 
   init() {
-    // Show first slide
-    this.goTo(0);
+    // Show first slide (skip if already active - avoids the slide briefly
+    // getting both 'active' and 'prev' classes and fading out on load)
+    if (!this.slides[this.current]?.classList.contains('active')) {
+      this.goTo(0);
+    }
 
     // Controls
     if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.prev());

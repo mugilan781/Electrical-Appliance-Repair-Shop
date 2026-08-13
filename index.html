@@ -24,13 +24,16 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/dark-mode.css" />
+  <link rel="preload" as="image" href="images/hero_repair_1.png" />
   <style>
-    /* Homepage only: solid base color + smooth fade-in for hero images (no flash while they load) */
+    /* Homepage only: solid base color so the hero never flashes while images load */
     .hero-slider,
     .hero-slide-bg { background-color: #111D27; }
-    .hero-slide-bg { animation: hero-bg-fade 1s ease both; }
-    @keyframes hero-bg-fade { from { opacity: 0; } to { opacity: 1; } }
+    /* Image fades in only once it has actually finished loading */
+    .hero-slide-bg { opacity: 0; transition: opacity 0.7s ease; }
+    .hero-slide-bg.loaded { opacity: 1; }
   </style>
+  <noscript><style>.hero-slide-bg { opacity: 1; }</style></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -712,6 +715,32 @@
   </div>
 </div>
 
+<script>
+  // Homepage only: preload hero images; fade each slide background in as soon as
+  // its image is ready, and tell the preloader when the first slide is ready.
+  (function () {
+    var bgs = Array.prototype.slice.call(document.querySelectorAll('.hero-slider .hero-slide-bg'));
+    var firstDone = false;
+    var resolveReady;
+    window.__fmHeroReady = new Promise(function (resolve) { resolveReady = resolve; });
+
+    function markLoaded(bg) {
+      bg.classList.add('loaded');
+      if (!firstDone) { firstDone = true; resolveReady(); }
+    }
+
+    bgs.forEach(function (bg) {
+      var m = (bg.style.backgroundImage || '').match(/url\(["']?([^"')]+)["']?\)/);
+      var src = m ? m[1] : '';
+      if (!src) { markLoaded(bg); return; }
+      var img = new Image();
+      img.onload = function () { markLoaded(bg); };
+      img.onerror = function () { markLoaded(bg); };
+      img.src = src;
+    });
+    if (!bgs.length) resolveReady();
+  })();
+</script>
 <script src="js/main.js"></script>
 <script src="js/booking.js"></script>
 <script src="js/hero-slider.js"></script>
