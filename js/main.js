@@ -30,23 +30,46 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
+  // Skip the preloader on internal page transitions (only show on first load / refresh)
+  if (sessionStorage.getItem('fmSkipPreloader') === '1') {
+    sessionStorage.removeItem('fmSkipPreloader');
+    preloader.classList.add('hidden');
+    return;
+  }
+
   const fill = preloader.querySelector('.preloader-fill');
   let progress = 0;
+  let hidden = false;
+
+  function hidePreloader() {
+    if (hidden) return;
+    hidden = true;
+    clearInterval(interval);
+    preloader.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  document.body.style.overflow = 'hidden';
 
   const interval = setInterval(() => {
     progress += Math.random() * 20;
     if (progress >= 100) {
       progress = 100;
-      clearInterval(interval);
-      setTimeout(() => {
-        preloader.classList.add('hidden');
-        document.body.style.overflow = '';
-      }, 300);
+      setTimeout(hidePreloader, 300);
     }
     if (fill) fill.style.width = progress + '%';
   }, 120);
 
-  document.body.style.overflow = 'hidden';
+  // Safety: never leave the preloader visible too long
+  setTimeout(hidePreloader, 3000);
+
+  // Back/forward cache: the page can be restored with the preloader still visible
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+      if (fill) fill.style.width = '100%';
+      hidePreloader();
+    }
+  });
 }
 
 // ── 2. NAVBAR ─────────────────────────────────────────────
@@ -399,6 +422,7 @@ function initPageTransition() {
           <div style="width:150px;height:2px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;margin:0 auto">
             <div style="height:100%;background:linear-gradient(90deg,#E8A020,#D9580A);border-radius:2px;animation:pageLoad 0.4s ease forwards" id="ptBar"></div>
           </div>
+          <div style="margin-top:1rem;color:white;font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:0.02em">FixMaster</div>
         </div>
       `;
       document.body.appendChild(overlay);
@@ -410,8 +434,14 @@ function initPageTransition() {
       requestAnimationFrame(() => { overlay.style.opacity = '1'; });
 
       setTimeout(() => {
+        sessionStorage.setItem('fmSkipPreloader', '1');
         window.location.href = href;
       }, 400);
+
+      // Safety: if navigation is blocked and never happens, remove the overlay
+      setTimeout(() => {
+        if (document.body.contains(overlay)) overlay.remove();
+      }, 1500);
     });
   });
 }
