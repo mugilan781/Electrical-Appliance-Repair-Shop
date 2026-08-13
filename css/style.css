@@ -1122,12 +1122,18 @@ select.form-control {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-top: var(--navbar-height);
   padding-bottom: 5rem;
+  text-align: center;
 }
 
 .hero-slide-text {
-  max-width: 640px;
+  max-width: 720px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
@@ -1165,11 +1171,13 @@ select.form-control {
   line-height: var(--leading-relaxed);
   margin-bottom: 1.5rem;
   max-width: 520px;
+  margin-inline: auto;
 }
 
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.875rem;
   margin-bottom: 1.75rem;
 }
@@ -1177,6 +1185,7 @@ select.form-control {
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
 }
 
