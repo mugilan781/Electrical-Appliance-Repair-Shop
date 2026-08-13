@@ -1541,6 +1541,15 @@ select.form-control {
 
 .footer-social a svg { width: 16px; height: 16px; }
 
+.footer .newsletter-form {
+  margin-inline: 0;
+  max-width: none;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.footer .newsletter-input { width: 100%; }
+
 .footer-col-title {
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -1619,7 +1628,7 @@ select.form-control {
 
 .footer-bottom-links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
 }
 
 .footer-bottom-links a {
@@ -1629,6 +1638,11 @@ select.form-control {
 }
 
 .footer-bottom-links a:hover { color: rgba(255,255,255,0.8); }
+
+.footer-bottom-sep {
+  margin-inline: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
 
 /* ── 16. PAGE TRANSITION ─────────────────────────────────── */
 .page-transition {
