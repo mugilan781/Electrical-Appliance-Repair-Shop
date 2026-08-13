@@ -54,7 +54,6 @@ function initNavbar() {
   const navbar = document.querySelector('.navbar');
   if (!navbar) return;
 
-  let lastScroll = 0;
   let ticking = false;
 
   function updateNavbar() {
@@ -67,14 +66,6 @@ function initNavbar() {
       navbar.classList.remove('scrolled');
     }
 
-    // Hide on scroll down, show on scroll up (optional)
-    if (scrollY > 200 && scrollY > lastScroll && !navbar.classList.contains('menu-open')) {
-      navbar.style.transform = 'translateY(-100%)';
-    } else {
-      navbar.style.transform = 'translateY(0)';
-    }
-
-    lastScroll = scrollY;
     ticking = false;
   }
 
