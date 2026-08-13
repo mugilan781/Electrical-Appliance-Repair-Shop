@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FixMaster Home 2 - Explore our complete electrical appliance repair services including turnaround times, team expertise, and affordable pricing guide." />
+  <title>FixMaster | Home — Premium Appliance Repair</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dark-mode.css" />
+</head>
+<body>
+<div id="preloader"><div class="preloader-logo"><div style="width:64px;height:64px;background:linear-gradient(135deg,#E8A020,#D9580A);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="36" height="36" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><p style="color:rgba(255,255,255,0.6);font-family:'DM Sans',sans-serif;font-size:0.85rem;text-align:center">Loading FixMaster...</p></div><div class="preloader-bar"><div class="preloader-fill"></div></div></div>
+<div class="scroll-indicator"></div>
+
+<!-- NAVBAR (same on all pages) -->
+<nav class="navbar">
+  <div class="container"><div class="navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <div class="logo-icon"><svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+      <div class="logo-text"><span class="logo-name">FixMaster</span><span class="logo-tagline">Appliance Repair Experts</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item has-dropdown"><a href="services.html" class="nav-link">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html#fan" class="dropdown-link"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Fan Repair</a></li>
+          <li><a href="services.html#iron" class="dropdown-link"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 18h15a3 3 0 0 0 0-6H6l-3 6z"/></svg>Iron Repair</a></li>
+          <li><a href="services.html#mixer" class="dropdown-link"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M5 3v16M19 3v16"/></svg>Mixer Repair</a></li>
+          <li><a href="services.html#geyser" class="dropdown-link"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2 1 4 3 5v7h6v-7c2-1 3-3 3-5a6 6 0 0 0-6-6z"/></svg>Geyser Repair</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="ctrl-btn theme-toggle" id="themeToggle" aria-label="Toggle theme"><span data-sun><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span><span data-moon style="display:none"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+      <button class="ctrl-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL">RTL</button>
+      <a href="contact.html" class="btn btn-orange btn-sm navbar-cta">Book Repair</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div></div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="mobile-nav-link">🏠 Home</a>
+  <a href="services.html" class="mobile-nav-link has-sub">🔧 Services <svg class="sub-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="transition:transform 0.3s"><polyline points="6 9 12 15 18 9"/></svg></a>
+  <div class="mobile-nav-sub" style="display:none"><a href="services.html#fan" class="mobile-sub-link">Fan Repair</a><a href="services.html#iron" class="mobile-sub-link">Iron Repair</a><a href="services.html#mixer" class="mobile-sub-link">Mixer Repair</a><a href="services.html#geyser" class="mobile-sub-link">Geyser Repair</a></div>
+  <a href="about.html" class="mobile-nav-link">ℹ️ About</a>
+  <a href="blog.html" class="mobile-nav-link">📰 Blog</a>
+  <a href="contact.html" class="mobile-nav-link">📞 Contact</a>
+  <div class="mobile-controls"><button class="ctrl-btn theme-toggle" style="flex:1">🌙 Dark Mode</button><button class="ctrl-btn rtl-toggle" style="flex:1">RTL</button><a href="contact.html" class="btn btn-orange btn-sm" style="flex:1">Book</a></div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 1: SPLIT HERO (VIDEO-STYLE)                  -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section style="min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:var(--navbar-height);overflow:hidden" aria-label="Hero section">
+  <!-- Left: Text -->
+  <div style="background:linear-gradient(135deg,var(--color-navy-dark) 0%,var(--color-navy) 100%);padding:5rem var(--container-pad) 5rem calc(max((100vw - 1280px)/2, var(--container-pad)));display:flex;align-items:center;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(232,160,32,0.14) 0%,transparent 50%),radial-gradient(circle at 90% 10%,rgba(217,88,10,0.1) 0%,transparent 50%)"></div>
+    <div style="position:relative;z-index:1;max-width:550px">
+      <span class="section-tag" style="margin-bottom:1.5rem;display:inline-flex">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        FixMaster — Since 2009
+      </span>
+      <h1 class="anim-fadeInUp" style="font-family:'Sora',sans-serif;font-size:clamp(2.2rem,5vw,4.2rem);font-weight:800;color:white;line-height:1.08;margin-bottom:1.5rem;letter-spacing:-0.02em">
+        Your Appliances Deserve <span style="color:var(--color-orange)">Expert Care</span>
+      </h1>
+      <p class="anim-fadeInUp anim-delay-2" style="color:rgba(255,255,255,0.75);font-size:1.1rem;line-height:1.75;margin-bottom:2.5rem">
+        From fans to geysers, we repair all electrical appliances with factory-level precision. 15+ years of trusted service in Tamil Nadu.
+      </p>
+
+      <!-- Rating bar -->
+      <div class="anim-fadeInUp anim-delay-3" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;padding:1.25rem;margin-bottom:2rem;backdrop-filter:blur(10px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem">
+          <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Customer Satisfaction</span>
+          <span style="color:white;font-weight:700">98%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" data-width="98%" style="width:0%"></div></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.75rem;margin-bottom:0.75rem">
+          <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">On-Time Delivery</span>
+          <span style="color:white;font-weight:700">95%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" data-width="95%" style="width:0%"></div></div>
+      </div>
+
+      <div class="anim-fadeInUp anim-delay-4" style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-orange btn-lg">Book a Repair</a>
+        <a href="services.html" class="btn btn-ghost btn-lg">Our Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Visual Panel -->
+  <div style="background-image:url('images/hero_home2.png');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:3rem;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:rgba(17,29,39,0.7)"></div>
+    <!-- Animated background circles -->
+    <div class="deco-circle deco-circle-blue" style="width:300px;height:300px;top:-50px;right:-50px;opacity:0.15"></div>
+    <div class="deco-circle deco-circle-orange" style="width:200px;height:200px;bottom:-30px;left:-30px;opacity:0.1"></div>
+
+    <!-- Service visual grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;width:100%;max-width:420px;position:relative;z-index:1">
+      <!-- Service tiles -->
+      <div class="anim-scaleIn" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1.25rem;padding:2rem;text-align:center;backdrop-filter:blur(10px);transition:all 0.3s" onmouseenter="this.style.background='rgba(232,160,32,0.2)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <div style="width:56px;height:56px;background:rgba(232,160,32,0.2);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;animation:float 3s ease-in-out infinite">
+          <svg width="28" height="28" fill="none" stroke="#F0B840" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 9l-2-7c0 0 2-1 4 2"/><path d="M15 12l7 1c0 0 1 2-2 4"/><path d="M12 15l2 7c0 0-2 1-4-2"/><path d="M9 12l-7-1c0 0-1-2 2-4"/></svg>
+        </div>
+        <p style="color:white;font-weight:700;font-family:'Sora',sans-serif">Fan Repair</p>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:0.25rem">₹299 onwards</p>
+      </div>
+
+      <div class="anim-scaleIn anim-delay-1" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1.25rem;padding:2rem;text-align:center;backdrop-filter:blur(10px);transition:all 0.3s" onmouseenter="this.style.background='rgba(217,88,10,0.2)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <div style="width:56px;height:56px;background:rgba(217,88,10,0.14);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;animation:float 3s ease-in-out infinite 1s">
+          <svg width="28" height="28" fill="none" stroke="#D9580A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 18h15a3 3 0 0 0 0-6H6l-3 6z"/></svg>
+        </div>
+        <p style="color:white;font-weight:700;font-family:'Sora',sans-serif">Iron Repair</p>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:0.25rem">₹199 onwards</p>
+      </div>
+
+      <div class="anim-scaleIn anim-delay-2" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1.25rem;padding:2rem;text-align:center;backdrop-filter:blur(10px);transition:all 0.3s" onmouseenter="this.style.background='rgba(232,160,32,0.2)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <div style="width:56px;height:56px;background:rgba(232,160,32,0.2);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;animation:float 4s ease-in-out infinite 0.5s">
+          <svg width="28" height="28" fill="none" stroke="#F0B840" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 3v16M19 3v16M5 7h14M5 17h14"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <p style="color:white;font-weight:700;font-family:'Sora',sans-serif">Mixer Repair</p>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:0.25rem">₹349 onwards</p>
+      </div>
+
+      <div class="anim-scaleIn anim-delay-3" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:1.25rem;padding:2rem;text-align:center;backdrop-filter:blur(10px);transition:all 0.3s" onmouseenter="this.style.background='rgba(217,88,10,0.2)'" onmouseleave="this.style.background='rgba(255,255,255,0.07)'">
+        <div style="width:56px;height:56px;background:rgba(217,88,10,0.14);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;animation:float 3.5s ease-in-out infinite 1.5s">
+          <svg width="28" height="28" fill="none" stroke="#D9580A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2 1 4 3 5v7h6v-7c2-1 3-3 3-5a6 6 0 0 0-6-6z"/></svg>
+        </div>
+        <p style="color:white;font-weight:700;font-family:'Sora',sans-serif">Geyser Repair</p>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:0.25rem">₹499 onwards</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 2: FEATURED SERVICES CARDS                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" aria-label="Featured services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Featured Services</span>
+      <h2 class="section-title">All Repairs Under <span>One Roof</span></h2>
+      <p class="section-desc">Complete appliance care — repair, servicing, AMC, and spare parts. One call fixes everything.</p>
+    </div>
+
+    <div class="grid grid-4 gap-6 stagger-children">
+      <div class="card card-body text-center reveal" style="padding:2rem">
+        <div style="width:64px;height:64px;background:var(--color-blue-glow);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;transition:all 0.3s" onmouseenter="this.style.background='var(--color-blue)'" onmouseleave="this.style.background='var(--color-blue-glow)'">
+          <svg width="30" height="30" fill="none" stroke="var(--color-blue)" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 9l-2-7c0 0 2-1 4 2"/><path d="M15 12l7 1c0 0 1 2-2 4"/><path d="M12 15l2 7c0 0-2 1-4-2"/><path d="M9 12l-7-1c0 0-1-2 2-4"/></svg>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:0.5rem">Fan Repair</h3>
+        <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem">All types, all brands</p>
+        <span class="badge badge-blue">From ₹299</span>
+      </div>
+      <div class="card card-body text-center reveal reveal-delay-1" style="padding:2rem">
+        <div style="width:64px;height:64px;background:var(--color-orange-glow);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem">
+          <svg width="30" height="30" fill="none" stroke="var(--color-orange)" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 18h15a3 3 0 0 0 0-6H6l-3 6z"/></svg>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:0.5rem">Iron Repair</h3>
+        <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem">Steam & dry irons</p>
+        <span class="badge badge-orange">From ₹199</span>
+      </div>
+      <div class="card card-body text-center reveal reveal-delay-2" style="padding:2rem">
+        <div style="width:64px;height:64px;background:var(--color-blue-glow);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem">
+          <svg width="30" height="30" fill="none" stroke="var(--color-blue)" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 3v16M19 3v16M5 7h14M5 17h14"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:0.5rem">Mixer Grinder</h3>
+        <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem">All brands repaired</p>
+        <span class="badge badge-blue">From ₹349</span>
+      </div>
+      <div class="card card-body text-center reveal reveal-delay-3" style="padding:2rem">
+        <div style="width:64px;height:64px;background:var(--color-orange-glow);border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem">
+          <svg width="30" height="30" fill="none" stroke="var(--color-orange)" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2 1 4 3 5v7h6v-7c2-1 3-3 3-5a6 6 0 0 0-6-6z"/></svg>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:0.5rem">Geyser Repair</h3>
+        <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem">Hot water systems</p>
+        <span class="badge badge-orange">From ₹499</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 3: TURNAROUND TIME                           -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section bg-secondary" aria-label="Turnaround time">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Turnaround Time</span>
+      <h2 class="section-title">Fast Repairs, <span>Faster</span> Returns</h2>
+      <p class="section-desc">We understand your time is valuable. Our streamlined repair process ensures minimal downtime for your appliances.</p>
+    </div>
+
+    <div class="grid grid-3 gap-6 stagger-children">
+      <div class="card card-body reveal" style="text-align:center;padding:2.5rem">
+        <div style="font-family:'Sora',sans-serif;font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,var(--color-blue),var(--color-blue-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem">2hr</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.75rem">Express Service</h3>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7">For simple repairs like iron heating element, fan capacitor replacement</p>
+        <span class="badge badge-green" style="margin-top:1rem">Same Day</span>
+      </div>
+      <div class="card card-body reveal reveal-delay-2" style="text-align:center;padding:2.5rem;border-color:var(--color-blue);box-shadow:var(--shadow-blue);position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--color-blue),var(--color-orange))"></div>
+        <span style="position:absolute;top:1rem;right:1rem;background:var(--color-orange);color:white;font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:50px">Most Popular</span>
+        <div style="font-family:'Sora',sans-serif;font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,var(--color-blue),var(--color-orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem">24hr</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.75rem">Standard Service</h3>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7">Motor rewinds, PCB repairs, thermostat replacements and component-level repairs</p>
+        <span class="badge badge-blue" style="margin-top:1rem">Next Day</span>
+      </div>
+      <div class="card card-body reveal reveal-delay-3" style="text-align:center;padding:2.5rem">
+        <div style="font-family:'Sora',sans-serif;font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,var(--color-orange),var(--color-orange-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem">72hr</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.75rem">Complex Repairs</h3>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7">Custom part sourcing, motor rewinding, complete overhauls with warranty certification</p>
+        <span class="badge badge-orange" style="margin-top:1rem">3 Days</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 4: PRICING GUIDE                             -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" aria-label="Pricing guide">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag orange">💰 Pricing Guide</span>
+      <h2 class="section-title">Transparent <span>Pricing</span> — No Surprises</h2>
+      <p class="section-desc">Straightforward pricing for all repair services. Free diagnosis before any work begins.</p>
+    </div>
+
+    <div class="grid grid-3 gap-6">
+      <!-- Basic -->
+      <div class="pricing-card reveal">
+        <div class="pricing-plan-name">Basic</div>
+        <div class="pricing-price">
+          <span class="pricing-currency">₹</span>
+          <span class="pricing-amount">199</span>
+          <span class="pricing-period">starting price</span>
+        </div>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Iron repair (heating element)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Fan capacitor replacement</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Basic diagnostics</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>7-day service warranty</span></li>
+          <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Home pickup</span></li>
+          <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Priority support</span></li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary w-full">Get Quote</a>
+      </div>
+
+      <!-- Standard -->
+      <div class="pricing-card featured reveal reveal-delay-2">
+        <div class="pricing-badge">Popular</div>
+        <div class="pricing-plan-name">Standard</div>
+        <div class="pricing-price">
+          <span class="pricing-currency" style="color:white">₹</span>
+          <span class="pricing-amount" style="color:white">499</span>
+          <span class="pricing-period">starting price</span>
+        </div>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>All basic repairs</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Motor & winding repairs</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Genuine spare parts</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>30-day warranty</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Free home pickup</span></li>
+          <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Priority support</span></li>
+        </ul>
+        <a href="contact.html" class="btn btn-orange w-full">Book Now</a>
+      </div>
+
+      <!-- Premium AMC -->
+      <div class="pricing-card reveal reveal-delay-3">
+        <div class="pricing-plan-name">AMC Annual</div>
+        <div class="pricing-price">
+          <span class="pricing-currency">₹</span>
+          <span class="pricing-amount">2,499</span>
+          <span class="pricing-period">per year</span>
+        </div>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Unlimited service calls</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>2x preventive maintenance</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Parts at cost price</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Free home pickup</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>24/7 priority hotline</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>3-hour response SLA</span></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary w-full">Get AMC Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 5: TEAM                                      -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section bg-secondary" aria-label="Our team">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Our Team</span>
+      <h2 class="section-title">Meet Our <span>Expert</span> Technicians</h2>
+      <p class="section-desc">ITI-certified professionals with years of hands-on experience in appliance repair.</p>
+    </div>
+
+    <div class="grid grid-4 gap-6 stagger-children">
+      <div class="reveal" style="text-align:center">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--color-blue),var(--color-navy));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid var(--color-blue-light)">R</div>
+        <h4 style="font-family:'Sora',sans-serif;font-weight:700">Rajesh Kumar</h4>
+        <p style="font-size:0.875rem;color:var(--color-blue);font-weight:600">Senior Technician</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">12 yrs experience</p>
+      </div>
+      <div class="reveal reveal-delay-1" style="text-align:center">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--color-orange),#B84808);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid var(--color-orange)">M</div>
+        <h4 style="font-family:'Sora',sans-serif;font-weight:700">Muthu Selvam</h4>
+        <p style="font-size:0.875rem;color:var(--color-orange);font-weight:600">Geyser Specialist</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">8 yrs experience</p>
+      </div>
+      <div class="reveal reveal-delay-2" style="text-align:center">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#10B981,#059669);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid #10B981">S</div>
+        <h4 style="font-family:'Sora',sans-serif;font-weight:700">Suresh Babu</h4>
+        <p style="font-size:0.875rem;color:#10B981;font-weight:600">Motor Specialist</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">10 yrs experience</p>
+      </div>
+      <div class="reveal reveal-delay-3" style="text-align:center">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#7C3AED);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid #8B5CF6">A</div>
+        <h4 style="font-family:'Sora',sans-serif;font-weight:700">Anbu Arasan</h4>
+        <p style="font-size:0.875rem;color:#8B5CF6;font-weight:600">Electronics Expert</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">6 yrs experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 6: RECENT BLOG                               -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" aria-label="Recent blog posts">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem">
+      <div class="reveal">
+        <span class="section-tag" style="margin-bottom:0.75rem;display:inline-flex">📰 Latest Tips</span>
+        <h2 class="section-title" style="margin-bottom:0">Helpful <span>Repair</span> Tips & Guides</h2>
+      </div>
+      <a href="blog.html" class="btn btn-secondary reveal">View All Posts</a>
+    </div>
+
+    <div class="grid grid-3 gap-6 stagger-children">
+      <div class="blog-card reveal">
+        <div class="blog-card-img" style="aspect-ratio:16/9">
+          <img src="images/service_fan.png" alt="Fan Care Tips" style="width:100%;height:100%;object-fit:cover" />
+          <span class="blog-card-category">Fan Care</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="blog-meta-item"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Aug 5, 2025</span><span class="blog-meta-item">5 min read</span></div>
+          <h3>Why Your Ceiling Fan Is Slowing Down</h3>
+          <p>Discover the 5 most common reasons a ceiling fan loses speed and how to fix each one at home.</p>
+          <a href="blog-details.html" class="blog-read-more arrow-slide">Read More <span class="arrow"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal reveal-delay-2">
+        <div class="blog-card-img" style="aspect-ratio:16/9">
+          <img src="images/service_geyser.png" alt="Geyser Making Noise" style="width:100%;height:100%;object-fit:cover" />
+          <span class="blog-card-category">Geyser</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="blog-meta-item"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jul 28, 2025</span><span class="blog-meta-item">7 min read</span></div>
+          <h3>Geyser Making Noise? Here's Why</h3>
+          <p>Popping, hissing, or rumbling sounds from your geyser? We explain the causes and fixes.</p>
+          <a href="blog-details.html" class="blog-read-more arrow-slide">Read More <span class="arrow"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal reveal-delay-3">
+        <div class="blog-card-img" style="aspect-ratio:16/9">
+          <img src="images/service_mixer.png" alt="Mixer Overheating" style="width:100%;height:100%;object-fit:cover" />
+          <span class="blog-card-category">Mixer</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="blog-meta-item"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jul 15, 2025</span><span class="blog-meta-item">4 min read</span></div>
+          <h3>Mixer Grinder Overheating? Quick Fix</h3>
+          <p>Learn how to prevent and fix mixer grinder overheating with our expert maintenance tips.</p>
+          <a href="blog-details.html" class="blog-read-more arrow-slide">Read More <span class="arrow"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 7: NEWSLETTER                                -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="cta-banner" aria-label="Newsletter subscription">
+  <div class="cta-orb cta-orb-1 orb-animate"></div>
+  <div class="cta-orb cta-orb-2 orb-animate"></div>
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="section-tag" style="margin-bottom:1.5rem;color:var(--color-orange);background:rgba(217,88,10,0.14);border-color:rgba(217,88,10,0.28)">✉️ Stay Updated</span>
+      <h2>Get Repair Tips & Exclusive Deals</h2>
+      <p>Subscribe to our newsletter for free maintenance guides, seasonal tips, and special discounts for subscribers.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address" />
+        <button type="submit" class="btn btn-orange">Subscribe Free</button>
+      </form>
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:1rem">No spam. Unsubscribe anytime. Join 5,000+ subscribers.</p>
+      <div style="display:flex;gap:2rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap">
+        <div style="text-align:center"><div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white"><span data-count="5000" data-suffix="+">0</span></div><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Subscribers</p></div>
+        <div style="text-align:center"><div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white"><span data-count="24">0</span></div><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Monthly Tips</p></div>
+        <div style="text-align:center"><div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white">Free</div><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Forever</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (reused) -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon"><svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><div class="brand-name">FixMaster</div><div class="brand-sub">Appliance Repair Experts</div></div></div>
+        <p class="footer-desc">Chennai's most trusted electrical appliance repair shop since 2009.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.853L.057 23.5l5.797-1.52A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.984 9.984 0 0 1-5.093-1.393l-.366-.217-3.438.901.921-3.354-.237-.385A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+        </div>
+      </div>
+      <div><h4 class="footer-col-title">Services</h4><ul class="footer-links"><li><a href="services.html#fan">Fan Repair</a></li><li><a href="services.html#iron">Iron Repair</a></li><li><a href="services.html#mixer">Mixer Repair</a></li><li><a href="services.html#geyser">Geyser Repair</a></li><li><a href="services.html">AMC Plans</a></li></ul></div>
+      <div><h4 class="footer-col-title">Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      <div><h4 class="footer-col-title">Contact</h4><div class="footer-contact-item"><div class="icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 8 8l1.8-1.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 24 17z"/></svg></div><div class="text"><strong>Phone</strong><a href="tel:+919876543210">+91-9876543210</a></div></div><div class="footer-contact-item"><div class="icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="text"><strong>Email</strong><a href="mailto:hello@fixmaster.in">hello@fixmaster.in</a></div></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem"><p>© 2025 FixMaster Appliance Repair. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div></div></div>
+</footer>
+
+<div class="floating-cta"><button class="floating-btn scroll-top" aria-label="Scroll to top"><svg width="22" height="22" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button><a href="tel:+919876543210" class="floating-btn phone" aria-label="Call us"><svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 8 8l1.8-1.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 24 17z"/></svg></a></div>
+<div class="cookie-banner" id="cookieBanner"><p>🍪 We use cookies to improve your experience. <a href="privacy-policy.html">Learn more</a>.</p><div class="cookie-btns"><button class="btn btn-sm btn-secondary cookie-decline">Decline</button><button class="btn btn-sm btn-primary cookie-accept">Accept</button></div></div>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
+
+

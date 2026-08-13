@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FixMaster Services - Expert fan repair, iron repair, mixer grinder repair, geyser repair, home pickup, AMC plans and more. Book online today." />
+  <title>Services | FixMaster Appliance Repair</title>
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/animations.css" /><link rel="stylesheet" href="css/dark-mode.css" />
+  <style>
+    .service-detail { background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-xl);overflow:hidden;margin-bottom:2rem;transition:box-shadow 0.3s }
+    .service-detail-header { padding:2rem 2.5rem;display:flex;align-items:center;gap:1.5rem;cursor:pointer;border-bottom:1px solid transparent;transition:all 0.3s }
+    .service-detail.active .service-detail-header { border-bottom-color:var(--border-color);background:var(--color-blue-glow) }
+    .service-detail-icon { width:56px;height:56px;background:var(--color-blue-glow);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0 }
+    .service-detail-body { padding:0;max-height:0;overflow:hidden;transition:max-height 0.5s ease }
+    .service-detail.active .service-detail-body { max-height:800px }
+    .service-detail-content { padding:2rem 2.5rem }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-logo"><div style="width:64px;height:64px;background:linear-gradient(135deg,#E8A020,#D9580A);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="36" height="36" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><p style="color:rgba(255,255,255,0.6);font-family:'DM Sans',sans-serif;font-size:0.85rem">Loading...</p></div><div class="preloader-bar"><div class="preloader-fill"></div></div></div>
+<div class="scroll-indicator"></div>
+
+<nav class="navbar"><div class="container"><div class="navbar-inner">
+  <a href="index.html" class="navbar-logo"><div class="logo-icon"><svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="logo-text"><span class="logo-name">FixMaster</span><span class="logo-tagline">Appliance Repair Experts</span></div></a>
+  <ul class="navbar-nav"><li class="nav-item"><a href="index.html" class="nav-link">Home</a></li><li class="nav-item has-dropdown"><a href="services.html" class="nav-link active">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a><ul class="dropdown-menu"><li><a href="#fan" class="dropdown-link">Fan Repair</a></li><li><a href="#iron" class="dropdown-link">Iron Repair</a></li><li><a href="#mixer" class="dropdown-link">Mixer Repair</a></li><li><a href="#geyser" class="dropdown-link">Geyser Repair</a></li></ul></li><li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li><li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li></ul>
+  <div class="navbar-controls"><button class="ctrl-btn theme-toggle" id="themeToggle" aria-label="Toggle theme"><span data-sun><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span><span data-moon style="display:none"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button><button class="ctrl-btn rtl-toggle" id="rtlToggle">RTL</button><a href="contact.html" class="btn btn-orange btn-sm navbar-cta">Book Repair</a><button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+</div></div></nav>
+<nav class="mobile-nav" id="mobileNav"><a href="index.html" class="mobile-nav-link">🏠 Home</a><a href="services.html" class="mobile-nav-link has-sub">🔧 Services <svg class="sub-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="transition:transform 0.3s"><polyline points="6 9 12 15 18 9"/></svg></a><div class="mobile-nav-sub" style="display:none"><a href="#fan" class="mobile-sub-link">Fan Repair</a><a href="#iron" class="mobile-sub-link">Iron Repair</a><a href="#mixer" class="mobile-sub-link">Mixer Repair</a><a href="#geyser" class="mobile-sub-link">Geyser Repair</a></div><a href="about.html" class="mobile-nav-link">ℹ️ About</a><a href="blog.html" class="mobile-nav-link">📰 Blog</a><a href="contact.html" class="mobile-nav-link">📞 Contact</a><div class="mobile-controls"><button class="ctrl-btn theme-toggle" style="flex:1">🌙 Dark</button><button class="ctrl-btn rtl-toggle" style="flex:1">RTL</button><a href="contact.html" class="btn btn-orange btn-sm" style="flex:1">Book</a></div></nav>
+
+<!-- SECTION 1: PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-pattern"></div>
+  <div class="container"><div class="page-hero-content reveal">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><span class="breadcrumb-item"><a href="index.html">Home</a></span><span class="breadcrumb-separator">›</span><span class="breadcrumb-item">Services</span></nav>
+    <h1 class="page-hero-title">Our <span style="color:var(--color-orange)">Repair Services</span></h1>
+    <p class="page-hero-desc">Comprehensive electrical appliance repair solutions — expert technicians, genuine parts, guaranteed results.</p>
+  </div></div>
+</section>
+
+<!-- SECTION 2: SERVICE CARDS GRID -->
+<section class="section bg-secondary" id="services-grid" aria-label="All services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">All Services</span>
+      <h2 class="section-title">Everything We <span>Repair & Service</span></h2>
+      <p class="section-desc">From ceiling fans to water heaters — if it runs on electricity, we fix it.</p>
+    </div>
+    <div class="grid grid-3 gap-6 stagger-children">
+      <div class="service-card reveal" id="fan" style="padding:0; overflow:hidden">
+        <img src="images/service_fan.png" alt="Fan Repair" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.5rem" />
+        <div style="padding:0 2rem 2rem">
+          <h3 style="display:flex;align-items:center;gap:0.5rem"><svg width="24" height="24" fill="none" stroke="var(--color-blue)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 9l-2-7c0 0 2-1 4 2"/><path d="M15 12l7 1c0 0 1 2-2 4"/><path d="M12 15l2 7c0 0-2 1-4-2"/><path d="M9 12l-7-1c0 0-1-2 2-4"/></svg> Fan Repair</h3>
+          <p>Ceiling fans, table fans, wall fans, exhaust fans. Bearing, winding, capacitor, regulator and speed control repairs.</p>
+          <div style="margin-bottom:1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge-blue">Ceiling Fan</span><span class="badge badge-blue">Table Fan</span><span class="badge badge-blue">Exhaust Fan</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:var(--color-blue);font-family:'Sora',sans-serif">From ₹299</span><a href="#booking" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1" id="iron" style="padding:0; overflow:hidden">
+        <img src="images/service_iron.png" alt="Iron Repair" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.5rem" />
+        <div style="padding:0 2rem 2rem">
+          <h3 style="display:flex;align-items:center;gap:0.5rem"><svg width="24" height="24" fill="none" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 18h15a3 3 0 0 0 0-6H6l-3 6z"/></svg> Iron Repair</h3>
+          <p>Steam irons, dry irons, garment steamers. Thermostat, heating element, steam valve and cord repairs.</p>
+          <div style="margin-bottom:1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge-orange">Steam Iron</span><span class="badge badge-orange">Dry Iron</span><span class="badge badge-blue">Garment Steamer</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:var(--color-orange);font-family:'Sora',sans-serif">From ₹199</span><a href="#booking" class="btn btn-orange btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2" id="mixer" style="padding:0; overflow:hidden">
+        <img src="images/service_mixer.png" alt="Mixer Repair" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.5rem" />
+        <div style="padding:0 2rem 2rem">
+          <h3 style="display:flex;align-items:center;gap:0.5rem"><svg width="24" height="24" fill="none" stroke="var(--color-blue)" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v16M19 3v16M5 7h14M5 17h14"/><circle cx="12" cy="12" r="3"/></svg> Mixer & Grinder</h3>
+          <p>Mixer grinders, food processors, blenders, juicers. Motor, jar seal, coupler, switch and overload protector.</p>
+          <div style="margin-bottom:1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge-blue">Motor Repair</span><span class="badge badge-blue">Jar Seal</span><span class="badge badge-orange">Food Processor</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:var(--color-blue);font-family:'Sora',sans-serif">From ₹349</span><a href="#booking" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="service-card reveal" id="geyser" style="padding:0; overflow:hidden">
+        <img src="images/service_geyser.png" alt="Geyser Repair" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.5rem" />
+        <div style="padding:0 2rem 2rem">
+          <h3 style="display:flex;align-items:center;gap:0.5rem"><svg width="24" height="24" fill="none" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2 1 4 3 5v7h6v-7c2-1 3-3 3-5a6 6 0 0 0-6-6z"/></svg> Geyser Repair</h3>
+          <p>Water heaters, geysers, boilers, instant geysers. Element, thermostat, anode rod and safety valve replacements.</p>
+          <div style="margin-bottom:1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge-orange">Water Heater</span><span class="badge badge-orange">Thermostat</span><span class="badge badge-blue">Safety Check</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:var(--color-orange);font-family:'Sora',sans-serif">From ₹499</span><a href="#booking" class="btn btn-orange btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1" style="padding:0; overflow:hidden">
+        <img src="images/service_home_pickup.jpg" alt="Home Pickup Service" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.5rem" />
+        <div style="padding:0 2rem 2rem">
+          <h3 style="display:flex;align-items:center;gap:0.5rem"><svg width="24" height="24" fill="none" stroke="var(--color-blue)" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Home Pickup Service</h3>
+          <p>Free pickup and delivery from your doorstep. We collect, repair, and return your appliance with real-time WhatsApp updates.</p>
+          <div style="margin-bottom:1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge-green">Free Pickup</span><span class="badge badge-green">Free Delivery</span><span class="badge badge-blue">Track on WhatsApp</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:#10B981;font-family:'Sora',sans-serif">Free Service</span><a href="#booking" class="btn btn-primary btn-sm">Schedule</a></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2" style="padding:0; overflow:hidden">
+        <img src="images/service_amc.jpg" alt="AMC Plans" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.5rem" />
+        <div style="padding:0 2rem 2rem">
+          <h3 style="display:flex;align-items:center;gap:0.5rem"><svg width="24" height="24" fill="none" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> AMC Plans</h3>
+          <p>Annual maintenance contracts for homes, offices, and businesses. Priority service, discounted repairs, and regular check-ups.</p>
+          <div style="margin-bottom:1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge-orange">Annual Plan</span><span class="badge badge-orange">Priority Support</span><span class="badge badge-blue">All Appliances</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:var(--color-orange);font-family:'Sora',sans-serif">From ₹2,499/yr</span><a href="#booking" class="btn btn-orange btn-sm">Get AMC</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SERVICE DETAIL ACCORDIONS -->
+<section class="section faq-section" aria-label="Service details">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Service Details</span>
+      <h2 class="section-title">What's <span>Included</span> in Each Service</h2>
+    </div>
+    <div style="max-width:800px;margin-inline:auto">
+      <div class="service-detail active faq-item" style="border:1px solid var(--border-color);border-radius:1rem;overflow:hidden;margin-bottom:1rem">
+        <div class="service-detail-header faq-question" style="padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;cursor:pointer;background:var(--bg-card)">
+          <div style="width:44px;height:44px;background:var(--color-blue-glow);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="var(--color-blue)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 9l-2-7c0 0 2-1 4 2"/><path d="M15 12l7 1c0 0 1 2-2 4"/><path d="M12 15l2 7c0 0-2 1-4-2"/><path d="M9 12l-7-1c0 0-1-2 2-4"/></svg></div>
+          <div style="flex:1"><strong>Fan Repair Services</strong><span style="display:block;font-size:0.85rem;color:var(--text-muted);font-weight:400">Ceiling fans, table fans, wall fans, exhaust fans</span></div>
+          <div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding-top:0.5rem">
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-blue)">What We Fix</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>✅ Bearing replacement</li><li>✅ Motor rewinding</li><li>✅ Capacitor replacement</li><li>✅ Speed regulator repair</li><li>✅ Blade balancing</li><li>✅ Wiring & switch repair</li></ul></div>
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-orange)">Pricing Guide</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>🔧 Capacitor — ₹299–499</li><li>🔧 Bearing — ₹399–699</li><li>🔧 Motor Rewinding — ₹699+</li><li>🔧 Regulator — ₹199–349</li><li>🔧 Full Service — ₹899+</li></ul></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid var(--border-color);border-radius:1rem;overflow:hidden;margin-bottom:1rem">
+        <div class="faq-question" style="padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;cursor:pointer;background:var(--bg-card)">
+          <div style="width:44px;height:44px;background:var(--color-orange-glow);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 18h15a3 3 0 0 0 0-6H6l-3 6z"/></svg></div>
+          <div style="flex:1"><strong>Iron Repair Services</strong><span style="display:block;font-size:0.85rem;color:var(--text-muted);font-weight:400">Steam, dry irons, garment steamers</span></div>
+          <div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer" style="max-height:0"><div class="faq-answer-inner">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding-top:0.5rem">
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-orange)">What We Fix</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>✅ Heating element replacement</li><li>✅ Thermostat calibration</li><li>✅ Steam valve repair</li><li>✅ Cord & plug replacement</li><li>✅ Sole plate cleaning</li></ul></div>
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-blue)">Pricing Guide</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>🔧 Heating Element — ₹199–349</li><li>🔧 Thermostat — ₹149–249</li><li>🔧 Steam Valve — ₹99–199</li><li>🔧 Cord Repair — ₹149</li></ul></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid var(--border-color);border-radius:1rem;overflow:hidden;margin-bottom:1rem">
+        <div class="faq-question" style="padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;cursor:pointer;background:var(--bg-card)">
+          <div style="width:44px;height:44px;background:var(--color-blue-glow);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="var(--color-blue)" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v16M19 3v16M5 7h14M5 17h14"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div style="flex:1"><strong>Mixer & Grinder Repair</strong><span style="display:block;font-size:0.85rem;color:var(--text-muted);font-weight:400">Mixer grinders, food processors, blenders</span></div>
+          <div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer" style="max-height:0"><div class="faq-answer-inner">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding-top:0.5rem">
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-blue)">What We Fix</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>✅ Motor replacement/rewind</li><li>✅ Jar seal & coupler</li><li>✅ Switch & speed control</li><li>✅ Overload protector</li><li>✅ Blade sharpening</li></ul></div>
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-orange)">Pricing Guide</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>🔧 Jar Seal — ₹149–249</li><li>🔧 Coupler — ₹99–149</li><li>🔧 Switch — ₹149–299</li><li>🔧 Motor Repair — ₹499+</li></ul></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="faq-item" style="border:1px solid var(--border-color);border-radius:1rem;overflow:hidden">
+        <div class="faq-question" style="padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;cursor:pointer;background:var(--bg-card)">
+          <div style="width:44px;height:44px;background:var(--color-orange-glow);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2 1 4 3 5v7h6v-7c2-1 3-3 3-5a6 6 0 0 0-6-6z"/></svg></div>
+          <div style="flex:1"><strong>Geyser Repair Services</strong><span style="display:block;font-size:0.85rem;color:var(--text-muted);font-weight:400">Water heaters, geysers, boilers</span></div>
+          <div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer" style="max-height:0"><div class="faq-answer-inner">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding-top:0.5rem">
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-orange)">What We Fix</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>✅ Heating element replacement</li><li>✅ Thermostat replacement</li><li>✅ Safety valve repair</li><li>✅ Anode rod replacement</li><li>✅ Tank descaling</li><li>✅ Pressure valve repair</li></ul></div>
+            <div><h5 style="font-weight:700;margin-bottom:0.75rem;color:var(--color-blue)">Pricing Guide</h5><ul style="color:var(--text-secondary);line-height:2;list-style:none;padding:0"><li>🔧 Element — ₹499–799</li><li>🔧 Thermostat — ₹349–599</li><li>🔧 Safety Valve — ₹249–399</li><li>🔧 Descaling — ₹699</li></ul></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: BOOKING FORM -->
+<section class="section bg-secondary" id="booking" aria-label="Book a repair">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start">
+      <div class="reveal from-left">
+        <span class="section-tag orange" style="margin-bottom:1rem;display:inline-flex">Book a Repair</span>
+        <h2 class="section-title" style="text-align:left;margin-bottom:1.5rem">Schedule Your <span>Repair</span> in Minutes</h2>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:2rem">Fill out the form and our team will call you within 2 hours to confirm the appointment. Home pickup available.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="display:flex;gap:1rem;align-items:center;padding:1rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem"><div style="width:40px;height:40px;background:var(--color-blue-glow);border-radius:0.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" fill="none" stroke="var(--color-blue)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><p style="font-weight:600;font-size:0.9rem">2-Hour Response</p><p style="font-size:0.8rem;color:var(--text-muted)">We call to confirm within 2 hours</p></div></div>
+          <div style="display:flex;gap:1rem;align-items:center;padding:1rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem"><div style="width:40px;height:40px;background:var(--color-orange-glow);border-radius:0.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" fill="none" stroke="var(--color-orange)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><p style="font-weight:600;font-size:0.9rem">30-Day Warranty</p><p style="font-size:0.8rem;color:var(--text-muted)">Every repair is fully guaranteed</p></div></div>
+          <div style="display:flex;gap:1rem;align-items:center;padding:1rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem"><div style="width:40px;height:40px;background:rgba(16,185,129,0.1);border-radius:0.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" fill="none" stroke="#10B981" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><p style="font-weight:600;font-size:0.9rem">Upfront Pricing</p><p style="font-size:0.8rem;color:var(--text-muted)">Full quote before any work starts</p></div></div>
+        </div>
+      </div>
+
+      <div class="reveal from-right">
+        <form id="bookingForm" class="card card-body" style="padding:2.5rem;box-shadow:var(--shadow-lg)" aria-label="Booking form">
+          <!-- Step indicators -->
+          <div style="display:flex;gap:0.5rem;margin-bottom:2rem;background:var(--bg-secondary);border-radius:0.5rem;padding:0.5rem">
+            <div class="step-indicator" style="flex:1;height:4px;border-radius:4px;background:var(--color-blue);transition:all 0.3s"></div>
+            <div class="step-indicator" style="flex:1;height:4px;border-radius:4px;background:var(--border-color);transition:all 0.3s"></div>
+            <div class="step-indicator" style="flex:1;height:4px;border-radius:4px;background:var(--border-color);transition:all 0.3s"></div>
+          </div>
+          <p class="booking-step-count" style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">Step 1 of 3</p>
+
+          <!-- Step 1: Appliance Info -->
+          <div class="booking-step">
+            <h3 style="font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem">What needs fixing?</h3>
+            <div class="form-group"><label class="form-label">Appliance Type <span>*</span></label>
+              <select class="form-control" name="appliance" required id="applianceType">
+                <option value="">Select appliance...</option>
+                <option>Ceiling Fan</option><option>Table/Wall Fan</option><option>Exhaust Fan</option><option>Steam Iron</option><option>Dry Iron</option><option>Mixer Grinder</option><option>Food Processor</option><option>Geyser / Water Heater</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label class="form-label">Brand <span>*</span></label><input type="text" class="form-control" name="brand" placeholder="e.g. Bajaj, Crompton, Havells" required /></div>
+            <div class="form-group"><label class="form-label">Describe the Problem <span>*</span></label><textarea class="form-control" name="problem" placeholder="e.g. Fan is running slow, making noise..." required minlength="10"></textarea></div>
+            <div style="display:flex;justify-content:flex-end"><button type="button" class="btn btn-primary booking-next">Next Step <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button></div>
+          </div>
+
+          <!-- Step 2: Contact -->
+          <div class="booking-step" style="display:none">
+            <h3 style="font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem">Your contact details</h3>
+            <div class="form-group"><label class="form-label">Full Name <span>*</span></label><input type="text" class="form-control" name="name" placeholder="Your full name" required /></div>
+            <div class="form-group"><label class="form-label">Phone Number <span>*</span></label><input type="tel" class="form-control" name="phone" placeholder="+91 XXXXX XXXXX" required /></div>
+            <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-control" name="email" placeholder="your@email.com" /></div>
+            <div style="display:flex;justify-content:space-between"><button type="button" class="btn btn-secondary booking-prev" style="display:none"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button><button type="button" class="btn btn-primary booking-next">Next Step <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button></div>
+          </div>
+
+          <!-- Step 3: Schedule -->
+          <div class="booking-step" style="display:none">
+            <h3 style="font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem">When & how?</h3>
+            <div class="form-group"><label class="form-label">Preferred Date <span>*</span></label><input type="date" class="form-control" name="date" required /></div>
+            <div class="form-group"><label class="form-label">Preferred Time <span>*</span></label>
+              <select class="form-control" name="time" required>
+                <option value="">Select time slot...</option>
+                <option>8:00 AM – 10:00 AM</option><option>10:00 AM – 12:00 PM</option><option>12:00 PM – 2:00 PM</option><option>2:00 PM – 4:00 PM</option><option>4:00 PM – 6:00 PM</option>
+              </select>
+            </div>
+            <div class="form-group"><label class="form-label">Service Type <span>*</span></label>
+              <select class="form-control" name="service_type" required>
+                <option value="">Select service...</option>
+                <option>Home Pickup</option><option>Drop-off at Center</option><option>On-site Repair</option>
+              </select>
+            </div>
+            <div class="form-group"><label class="form-label">Address</label><textarea class="form-control" name="address" placeholder="Your complete address (for pickup/on-site)" style="min-height:80px"></textarea></div>
+            <div style="display:flex;justify-content:space-between">
+              <button type="button" class="btn btn-secondary booking-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+              <button type="submit" class="btn btn-orange booking-submit" style="display:none">
+                <svg width="18" height="18" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Confirm Booking
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: COVERAGE AREAS -->
+<section class="section" aria-label="Service coverage areas">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Coverage</span>
+      <h2 class="section-title">We Serve All Across <span>Tamil Nadu</span></h2>
+      <p class="section-desc">Our technicians cover major cities and areas across Tamil Nadu with fast pickup and delivery.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:900px;margin-inline:auto" class="stagger-children">
+      <div class="reveal" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-blue)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🏙️</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Chennai</p></div>
+      <div class="reveal reveal-delay-1" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-blue)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🌆</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Coimbatore</p></div>
+      <div class="reveal reveal-delay-2" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-blue)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🏛️</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Madurai</p></div>
+      <div class="reveal reveal-delay-3" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-blue)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🌇</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Trichy</p></div>
+      <div class="reveal reveal-delay-4" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-blue)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🏘️</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Salem</p></div>
+      <div class="reveal" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-orange)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🌉</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Erode</p></div>
+      <div class="reveal reveal-delay-1" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-orange)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🏗️</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Vellore</p></div>
+      <div class="reveal reveal-delay-2" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-orange)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🏡</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Tiruppur</p></div>
+      <div class="reveal reveal-delay-3" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s" onmouseenter="this.style.borderColor='var(--color-orange)'" onmouseleave="this.style.borderColor='var(--border-color)'"><span style="font-size:1.5rem">🏙️</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem">Thanjavur</p></div>
+      <div class="reveal reveal-delay-4" style="text-align:center;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;transition:all 0.3s;background:var(--color-blue-glow);border-color:rgba(232,160,32,0.2)"><span style="font-size:1.5rem">➕</span><p style="font-size:0.85rem;font-weight:600;margin-top:0.5rem;color:var(--color-blue)">+50 more</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: FAQ -->
+<section class="section bg-secondary faq-section" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div class="faq-list" style="max-width:780px;margin-inline:auto">
+      <div class="faq-item"><button class="faq-question">How long does a repair typically take?<div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer"><div class="faq-answer-inner">Most simple repairs (fan capacitor, iron element) are completed within 2–4 hours. Motor repairs and rewinding take 24–48 hours. Complex PCB repairs may take up to 72 hours. We always inform you of the estimated time upfront.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Do you use genuine spare parts?<div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer"><div class="faq-answer-inner">Yes. We only use OEM (Original Equipment Manufacturer) or certified quality-equivalent spare parts. All replacement parts are sourced from authorized distributors.</div></div></div>
+      <div class="faq-item"><button class="faq-question">What is your warranty on repairs?<div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer"><div class="faq-answer-inner">Every repair comes with a 30-day warranty. If the same issue recurs within 30 days of repair, we fix it completely free of charge.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Is the home pickup service really free?<div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer"><div class="faq-answer-inner">Yes! Pickup and delivery is completely free within Chennai city limits. For other cities, a small ₹99 logistics fee may apply. This will be communicated at the time of booking.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Do you provide a cost estimate before starting the repair?<div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. After diagnostics, we provide a complete cost breakdown. No repair work is done without your written/verbal approval on the quoted amount.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: CTA BANNER -->
+<section class="cta-banner" aria-label="Book a repair">
+  <div class="cta-orb cta-orb-1 orb-animate"></div><div class="cta-orb cta-orb-2 orb-animate"></div>
+  <div class="container"><div class="cta-inner reveal">
+    <h2>Not Sure What's Wrong? Let Us Diagnose It — <span style="color:var(--color-orange)">Free!</span></h2>
+    <p>Free diagnostic service on all appliances. Book a pickup and we'll tell you exactly what needs fixing before charging a single rupee.</p>
+    <div class="cta-buttons"><a href="#booking" class="btn btn-orange btn-lg">Book Free Diagnosis</a><a href="tel:+919876543210" class="btn btn-ghost btn-lg">📞 Call Now</a></div>
+  </div></div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo"><div class="logo-icon"><svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><div class="brand-name">FixMaster</div><div class="brand-sub">Appliance Repair Experts</div></div></div><p class="footer-desc">Chennai's most trusted appliance repair shop since 2009.</p><div class="footer-social"><a href="#" aria-label="Facebook"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" aria-label="Instagram"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div></div><div><h4 class="footer-col-title">Services</h4><ul class="footer-links"><li><a href="#fan">Fan Repair</a></li><li><a href="#iron">Iron Repair</a></li><li><a href="#mixer">Mixer Repair</a></li><li><a href="#geyser">Geyser Repair</a></li><li><a href="#booking">Book Repair</a></li></ul></div><div><h4 class="footer-col-title">Company</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h4 class="footer-col-title">Contact</h4><div class="footer-contact-item"><div class="icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 8 8l1.8-1.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 24 17z"/></svg></div><div class="text"><strong>Phone</strong><a href="tel:+919876543210">+91-9876543210</a></div></div></div></div></div><div class="footer-bottom"><div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem"><p>© 2025 FixMaster Appliance Repair. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div></div></div></footer>
+
+<div class="floating-cta"><button class="floating-btn scroll-top" aria-label="Scroll to top"><svg width="22" height="22" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button><a href="tel:+919876543210" class="floating-btn phone" aria-label="Call us"><svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 8 8l1.8-1.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 24 17z"/></svg></a></div>
+<div class="cookie-banner" id="cookieBanner"><p>🍪 We use cookies. <a href="privacy-policy.html">Learn more</a>.</p><div class="cookie-btns"><button class="btn btn-sm btn-secondary cookie-decline">Decline</button><button class="btn btn-sm btn-primary cookie-accept">Accept</button></div></div>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
+
