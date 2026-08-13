@@ -66,16 +66,22 @@
           <a href="services.html" class="btn btn-secondary">Our Services</a>
         </div>
       </div>
-      <div class="reveal from-right">
-        <div style="background:linear-gradient(135deg,var(--color-navy),var(--color-navy-light));border-radius:2rem;padding:3rem;position:relative;overflow:hidden">
+      <div class="reveal from-right" style="display:flex; flex-direction:column; gap:2rem">
+        <div style="position:relative; border-radius:2rem; overflow:hidden; box-shadow:var(--shadow-lg)">
+          <img src="images/founder.jpg" alt="Ramesh Krishnan - Founder" style="width:100%; display:block; aspect-ratio:3/2; object-fit:cover" />
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(17,29,39,0.85) 0%, rgba(17,29,39,0) 50%)"></div>
+          <div style="position:absolute; bottom:1.5rem; left:1.5rem; right:1.5rem">
+            <h4 style="color:white; font-family:'Sora',sans-serif; font-size:1.25rem; font-weight:700; margin-bottom:0.25rem">Ramesh Krishnan</h4>
+            <p style="color:var(--color-orange); font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em">Founder & Director</p>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--color-navy),var(--color-navy-light));border-radius:2rem;padding:2.5rem;position:relative;overflow:hidden">
           <div style="position:absolute;top:-30px;right:-30px;width:200px;height:200px;background:rgba(217,88,10,0.1);border-radius:50%;filter:blur(40px)"></div>
           <div style="position:relative;z-index:1">
-            <div style="font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--color-orange);margin-bottom:0.5rem">Founded in</div>
-            <div style="font-family:'Sora',sans-serif;font-size:5rem;font-weight:800;color:white;line-height:1;margin-bottom:1.5rem">2009</div>
-            <p style="color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:2rem">"My goal was simple — be the technician I would want to hire for my own family's appliances."<br><strong style="color:var(--color-orange)">— Ramesh Krishnan, Founder</strong></p>
+            <p style="color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:1.5rem;font-style:italic">"My goal was simple — be the technician I would want to hire for my own family's appliances."</p>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-              <div style="background:rgba(255,255,255,0.07);border-radius:1rem;padding:1.25rem;text-align:center"><div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:white"><span data-count="50" data-suffix="+">0</span></div><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Staff Members</p></div>
-              <div style="background:rgba(255,255,255,0.07);border-radius:1rem;padding:1.25rem;text-align:center"><div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:white"><span data-count="12">0</span></div><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Service Centers</p></div>
+              <div style="background:rgba(255,255,255,0.07);border-radius:1rem;padding:1rem;text-align:center"><div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white"><span data-count="50" data-suffix="+">0</span></div><p style="color:rgba(255,255,255,0.6);font-size:0.8rem">Staff Members</p></div>
+              <div style="background:rgba(255,255,255,0.07);border-radius:1rem;padding:1rem;text-align:center"><div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white"><span data-count="12">0</span></div><p style="color:rgba(255,255,255,0.6);font-size:0.8rem">Service Centers</p></div>
             </div>
           </div>
         </div>
@@ -153,29 +159,73 @@
       <p class="section-desc">Skilled, certified, and passionate — our team brings decades of combined expertise to every repair.</p>
     </div>
     <div class="grid grid-4 gap-6 stagger-children">
-      <div class="reveal" style="text-align:center;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1.5rem;transition:all 0.3s" onmouseenter="this.style.boxShadow='var(--shadow-lg)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
-        <div style="width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--color-blue),var(--color-navy));display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid rgba(232,160,32,0.28)">R</div>
-        <h4 style="font-family:'Sora',sans-serif;font-weight:700;margin-bottom:0.25rem">Rajesh Kumar</h4>
-        <p style="font-size:0.875rem;color:var(--color-blue);font-weight:600;margin-bottom:0.25rem">Founder & Lead Tech</p>
-        <p style="font-size:0.8rem;color:var(--text-muted)">15+ years • ITI Certified</p>
+      <div class="card card-body reveal" style="padding:0; overflow:hidden; transition:all 0.3s; display:flex; flex-direction:column; justify-content:between">
+        <div style="aspect-ratio:1/1; overflow:hidden; position:relative">
+          <img src="images/tech_rajesh.jpg" alt="Rajesh Kumar" style="width:100%; height:100%; object-fit:cover" />
+          <span style="position:absolute; top:1rem; right:1rem; background:rgba(28,43,57,0.85); backdrop-filter:blur(5px); color:white; font-size:0.75rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:50px; border:1px solid rgba(255,255,255,0.15)">15 Yrs Exp</span>
+        </div>
+        <div style="padding:1.5rem; text-align:left; flex-grow:1; display:flex; flex-direction:column; justify-content:between">
+          <div>
+            <h4 style="font-family:'Sora',sans-serif; font-weight:700; font-size:1.15rem; margin-bottom:0.25rem; color:white">Rajesh Kumar</h4>
+            <p style="font-size:0.85rem; color:var(--color-blue); font-weight:600; margin-bottom:0.75rem">Founder & Lead Tech</p>
+            <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1rem">Expert in ceiling/table fan repair, bearing replacements, and team diagnostics.</p>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:0.75rem; margin-top:auto">
+            <span style="display:inline-flex; align-items:center; gap:0.25rem; color:#FCA55D; font-size:0.8rem; font-weight:700"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.9 Rating</span>
+            <span style="font-size:0.75rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; font-weight:600">ITI Certified</span>
+          </div>
+        </div>
       </div>
-      <div class="reveal reveal-delay-1" style="text-align:center;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1.5rem;transition:all 0.3s" onmouseenter="this.style.boxShadow='var(--shadow-lg)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
-        <div style="width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--color-orange),#B84808);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid rgba(217,88,10,0.28)">M</div>
-        <h4 style="font-family:'Sora',sans-serif;font-weight:700;margin-bottom:0.25rem">Muthu Selvam</h4>
-        <p style="font-size:0.875rem;color:var(--color-orange);font-weight:600;margin-bottom:0.25rem">Geyser Specialist</p>
-        <p style="font-size:0.8rem;color:var(--text-muted)">10 years • Plumbing Cert.</p>
+      <div class="card card-body reveal reveal-delay-1" style="padding:0; overflow:hidden; transition:all 0.3s; display:flex; flex-direction:column; justify-content:between">
+        <div style="aspect-ratio:1/1; overflow:hidden; position:relative">
+          <img src="images/tech_muthu.jpg" alt="Muthu Selvam" style="width:100%; height:100%; object-fit:cover" />
+          <span style="position:absolute; top:1rem; right:1rem; background:rgba(28,43,57,0.85); backdrop-filter:blur(5px); color:white; font-size:0.75rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:50px; border:1px solid rgba(255,255,255,0.15)">10 Yrs Exp</span>
+        </div>
+        <div style="padding:1.5rem; text-align:left; flex-grow:1; display:flex; flex-direction:column; justify-content:between">
+          <div>
+            <h4 style="font-family:'Sora',sans-serif; font-weight:700; font-size:1.15rem; margin-bottom:0.25rem; color:white">Muthu Selvam</h4>
+            <p style="font-size:0.85rem; color:var(--color-orange); font-weight:600; margin-bottom:0.75rem">Geyser Specialist</p>
+            <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1rem">Specializes in high-pressure geyser repairs, heating element coil swaps, and safety checks.</p>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:0.75rem; margin-top:auto">
+            <span style="display:inline-flex; align-items:center; gap:0.25rem; color:#FCA55D; font-size:0.8rem; font-weight:700"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.8 Rating</span>
+            <span style="font-size:0.75rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; font-weight:600">Plumbing Cert</span>
+          </div>
+        </div>
       </div>
-      <div class="reveal reveal-delay-2" style="text-align:center;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1.5rem;transition:all 0.3s" onmouseenter="this.style.boxShadow='var(--shadow-lg)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
-        <div style="width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#10B981,#059669);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid rgba(16,185,129,0.3)">S</div>
-        <h4 style="font-family:'Sora',sans-serif;font-weight:700;margin-bottom:0.25rem">Suresh Babu</h4>
-        <p style="font-size:0.875rem;color:#10B981;font-weight:600;margin-bottom:0.25rem">Motor Winding Expert</p>
-        <p style="font-size:0.8rem;color:var(--text-muted)">12 years • Diploma EEE</p>
+      <div class="card card-body reveal reveal-delay-2" style="padding:0; overflow:hidden; transition:all 0.3s; display:flex; flex-direction:column; justify-content:between">
+        <div style="aspect-ratio:1/1; overflow:hidden; position:relative">
+          <img src="images/tech_suresh.jpg" alt="Suresh Babu" style="width:100%; height:100%; object-fit:cover" />
+          <span style="position:absolute; top:1rem; right:1rem; background:rgba(28,43,57,0.85); backdrop-filter:blur(5px); color:white; font-size:0.75rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:50px; border:1px solid rgba(255,255,255,0.15)">12 Yrs Exp</span>
+        </div>
+        <div style="padding:1.5rem; text-align:left; flex-grow:1; display:flex; flex-direction:column; justify-content:between">
+          <div>
+            <h4 style="font-family:'Sora',sans-serif; font-weight:700; font-size:1.15rem; margin-bottom:0.25rem; color:white">Suresh Babu</h4>
+            <p style="font-size:0.85rem; color:#10B981; font-weight:600; margin-bottom:0.75rem">Motor Winding Expert</p>
+            <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1rem">Master of electric motor winding, appliance balancing, and mixer speed calibration.</p>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:0.75rem; margin-top:auto">
+            <span style="display:inline-flex; align-items:center; gap:0.25rem; color:#FCA55D; font-size:0.8rem; font-weight:700"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.9 Rating</span>
+            <span style="font-size:0.75rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; font-weight:600">Diploma EEE</span>
+          </div>
+        </div>
       </div>
-      <div class="reveal reveal-delay-3" style="text-align:center;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1.5rem;transition:all 0.3s" onmouseenter="this.style.boxShadow='var(--shadow-lg)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
-        <div style="width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#7C3AED);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Sora',sans-serif;font-size:2.5rem;font-weight:800;color:white;border:3px solid rgba(139,92,246,0.3)">A</div>
-        <h4 style="font-family:'Sora',sans-serif;font-weight:700;margin-bottom:0.25rem">Anbu Arasan</h4>
-        <p style="font-size:0.875rem;color:#8B5CF6;font-weight:600;margin-bottom:0.25rem">PCB & Electronics</p>
-        <p style="font-size:0.8rem;color:var(--text-muted)">8 years • B.E. Electronics</p>
+      <div class="card card-body reveal reveal-delay-3" style="padding:0; overflow:hidden; transition:all 0.3s; display:flex; flex-direction:column; justify-content:between">
+        <div style="aspect-ratio:1/1; overflow:hidden; position:relative">
+          <img src="images/tech_anbu.jpg" alt="Anbu Arasan" style="width:100%; height:100%; object-fit:cover" />
+          <span style="position:absolute; top:1rem; right:1rem; background:rgba(28,43,57,0.85); backdrop-filter:blur(5px); color:white; font-size:0.75rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:50px; border:1px solid rgba(255,255,255,0.15)">8 Yrs Exp</span>
+        </div>
+        <div style="padding:1.5rem; text-align:left; flex-grow:1; display:flex; flex-direction:column; justify-content:between">
+          <div>
+            <h4 style="font-family:'Sora',sans-serif; font-weight:700; font-size:1.15rem; margin-bottom:0.25rem; color:white">Anbu Arasan</h4>
+            <p style="font-size:0.85rem; color:#8B5CF6; font-weight:600; margin-bottom:0.75rem">PCB & Electronics</p>
+            <p style="font-size:0.8rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1rem">Dedicated electronics engineer specializing in PCB repair, micro-soldering, and testing.</p>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:0.75rem; margin-top:auto">
+            <span style="display:inline-flex; align-items:center; gap:0.25rem; color:#FCA55D; font-size:0.8rem; font-weight:700"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.7 Rating</span>
+            <span style="font-size:0.75rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; font-weight:600">B.E. Electronics</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
