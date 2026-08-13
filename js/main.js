@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initPageTransition();
   initSmoothScroll();
-  initDropdowns();
 });
 
 // ── 1. PRELOADER ──────────────────────────────────────────
@@ -129,19 +128,6 @@ function initMobileNav() {
       navbar?.classList.remove('menu-open');
       document.body.style.overflow = '';
     }
-  });
-
-  // Mobile accordion for dropdowns
-  mobileNav.querySelectorAll('.mobile-nav-link.has-sub').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const sub = link.nextElementSibling;
-      if (sub && sub.classList.contains('mobile-nav-sub')) {
-        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-        const icon = link.querySelector('.sub-arrow');
-        if (icon) icon.style.transform = sub.style.display === 'block' ? 'rotate(180deg)' : '';
-      }
-    });
   });
 }
 
@@ -453,30 +439,7 @@ function initSmoothScroll() {
   });
 }
 
-// ── 16. DROPDOWNS ─────────────────────────────────────────
-function initDropdowns() {
-  // Touch device support for dropdowns
-  if ('ontouchstart' in window) {
-    document.querySelectorAll('.nav-item.has-dropdown > .nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const dropdown = link.nextElementSibling;
-        if (!dropdown) return;
-        e.preventDefault();
-        const isOpen = dropdown.style.display === 'block';
-        document.querySelectorAll('.dropdown-menu').forEach(d => d.style.display = '');
-        dropdown.style.display = isOpen ? '' : 'block';
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-item')) {
-        document.querySelectorAll('.dropdown-menu').forEach(d => d.style.display = '');
-      }
-    });
-  }
-}
-
-// ── 17. GLOBAL HELPERS ────────────────────────────────────
+// ── 16. GLOBAL HELPERS ────────────────────────────────────
 window.AppHelpers = {
   formatPhone: (tel) => `tel:${tel.replace(/\D/g, '')}`,
 

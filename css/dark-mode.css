@@ -12,15 +12,6 @@
   background: rgba(7,14,20,0.97);
 }
 
-[data-theme="dark"] .navbar-nav .dropdown-menu {
-  background: #192635;
-  border-color: rgba(255,255,255,0.08);
-}
-
-[data-theme="dark"] .dropdown-menu .dropdown-link:hover {
-  background: rgba(232,160,32,0.12);
-}
-
 /* ── CARDS ───────────────────────────────────────────────── */
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .testimonial-card,
