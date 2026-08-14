@@ -1,0 +1,114 @@
+/* ==========================================================================
+   FixMaster - Responsive Overrides
+   Loaded AFTER style.css. Every rule lives inside a media query, so the
+   desktop (>= 1025px) layout is never modified.
+   Attribute selectors target the inline-style grids used across pages.
+   minmax(0,1fr) tracks let content shrink below its min-content, so wide
+   content (counters, stat cards) can never push the track past the screen.
+   ========================================================================== */
+
+/* ============ Narrow desktop windows (1025-1100px) ============ */
+/* The full desktop navbar needs ~1046px to fit. In short desktop windows
+   give it slightly tighter spacing so the Book Repair button never clips
+   off the right edge. With space-between the smaller gap is only visible
+   when the navbar is actually cramped, so normal desktop is unaffected. */
+@media (min-width: 1025px) and (max-width: 1100px) {
+  .navbar-inner { gap: 1rem; }
+  .navbar-nav .nav-link { padding: 0.5rem 0.7rem; }
+}
+
+/* ============ Tablet (max-width: 1024px) ============ */
+@media (max-width: 1024px) {
+
+  /* Kill any residual horizontal overflow (fixed navbar, scaled hero slides)
+     at the root so tablets can never rubber-band to a blank right gap.
+     overflow-x: clip does NOT create a scroll container, so position:sticky
+     keeps working. Desktop (>= 1025px) is untouched. */
+  html { overflow-x: clip; }
+
+  /* Match the collapsed tablet navbar height so the mobile drawer always
+     starts flush below the bar (64px == the .navbar.scrolled height). */
+  :root { --navbar-height: 64px; }
+
+  /* Stack sidebar layouts (blog sidebar, policy TOC, booking/info columns) */
+  [style*="grid-template-columns:1fr 300px"],
+  [style*="grid-template-columns:1fr 320px"],
+  [style*="grid-template-columns:1fr 1.4fr"],
+  [style*="grid-template-columns:280px 1fr"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  /* Stack large content grids (story sections, info sections, featured blog) */
+  [style*="grid-template-columns:1fr 1fr;gap:5rem"],
+  [style*="grid-template-columns:1fr 1fr;gap:4rem"],
+  [style*="grid-template-columns:1fr 1fr;min-height:360px"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  /* Unstick policy / blog table-of-contents sidebars */
+  [style*="position:sticky;top:100px"] {
+    position: static !important;
+  }
+
+  /* Stats: 4 columns -> 2 columns */
+  [style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+
+  /* Home2 split hero -> stacked panels */
+  section[aria-label="Hero section"] {
+    height: auto !important;
+    min-height: 100vh;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  section[aria-label="Hero section"] > div:nth-child(2) {
+    min-height: 420px;
+  }
+}
+
+/* ============ Mobile (max-width: 768px) ============ */
+@media (max-width: 768px) {
+
+  /* Booking / comment form rows -> 1 column */
+  [style*="grid-template-columns:1fr 1fr;gap:1.25rem"]:has(.form-group) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  /* Services accordion "What We Fix / Pricing Guide" lists */
+  [style*="grid-template-columns:1fr 1fr;gap:2rem;padding-top:0.5rem"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* ============ Small mobile (max-width: 480px) ============ */
+@media (max-width: 480px) {
+
+  /* Navbar: logo + controls overflow the right edge on narrow phones */
+  .navbar-inner {
+    gap: 0.75rem !important;
+  }
+  .navbar-logo .logo-tagline {
+    display: none !important;
+  }
+
+  /* Home2 hero service tiles -> 1 column */
+  [style*="grid-template-columns:1fr 1fr;gap:1.25rem;width:100%;max-width:420px"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  /* Privacy cookie table rows -> stacked */
+  [style*="grid-template-columns:1fr 2fr 1fr"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 0.35rem;
+  }
+
+  /* Featured blog card content padding */
+  [style*="padding:3.5rem;display:flex;flex-direction:column"] {
+    padding: 2rem !important;
+  }
+
+  /* Giant 4.5rem stat counter must fit a phone screen */
+  [style*="font-size:4.5rem"] {
+    font-size: clamp(2.25rem, 10vw, 4.5rem) !important;
+  }
+}

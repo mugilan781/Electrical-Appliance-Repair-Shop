@@ -2143,12 +2143,16 @@ select.form-control {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  /* The desktop navbar (logo + 6 links + controls) is ~982px wide, so it
+     cannot fit viewports below ~1080px. Collapse it to the hamburger menu
+     on tablets too — the drawer already works at every width. */
+  .navbar-nav { display: none; }
+  .hamburger { display: flex; }
+  .navbar-cta { display: none; }
 }
 
 @media (max-width: 768px) {
   :root { --navbar-height: 64px; }
-  .navbar-nav { display: none; }
-  .hamburger { display: flex; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -2159,7 +2163,6 @@ select.form-control {
   .section-header { text-align: center !important; margin-inline: auto !important; }
   .floating-cta { bottom: 1.25rem; right: 1.25rem; }
   [dir="rtl"] .floating-cta { left: 1.25rem; right: auto; }
-  .navbar-cta { display: none; }
 }
 
 @media (max-width: 480px) {
