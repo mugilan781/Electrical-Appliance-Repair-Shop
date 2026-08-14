@@ -231,7 +231,33 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 2: SERVICES OVERVIEW                         -->
+<!-- SECTION 2: STATS COUNTER                             -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section-sm stats-section" style="background:linear-gradient(135deg,var(--color-navy) 0%,var(--color-navy-light) 100%)" aria-label="Our achievements">
+  <div class="container">
+    <div class="grid grid-4 gap-6 stagger-children">
+      <div class="stat-card reveal">
+        <div class="stat-number"><span data-count="10000" data-suffix="+">0</span></div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Repairs Completed</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-number"><span data-count="98" data-suffix="%">0</span></div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Customer Satisfaction</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-number"><span data-count="15" data-suffix="+">0</span></div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Years Experience</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-4">
+        <div class="stat-number"><span data-count="50" data-suffix="+">0</span></div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Expert Technicians</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 3: SERVICES OVERVIEW                         -->
 <!-- ══════════════════════════════════════════════════════ -->
 <section class="section bg-secondary" aria-label="Our services">
   <div class="container">
@@ -333,7 +359,7 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 3: WHY CHOOSE US                             -->
+<!-- SECTION 4: WHY CHOOSE US                             -->
 <!-- ══════════════════════════════════════════════════════ -->
 <section class="section" aria-label="Why choose FixMaster">
   <div class="container">
@@ -380,44 +406,79 @@
 
       <!-- Right: Visual -->
       <div class="reveal from-right" style="position:relative">
-        <div style="background:linear-gradient(135deg,var(--color-navy),var(--color-navy-light));border-radius:2rem;padding:3rem;position:relative;overflow:hidden">
+        <!-- Interactive background glow behind the card -->
+        <div style="position:absolute;top:-20px;left:-20px;right:-20px;bottom:-20px;background:radial-gradient(circle at 10% 10%,rgba(232,160,32,0.15),transparent 40%),radial-gradient(circle at 90% 90%,rgba(13,123,112,0.15),transparent 40%);filter:blur(30px);z-index:0;pointer-events:none"></div>
+        
+        <div class="stats-dashboard-card" style="position:relative;z-index:1;background:linear-gradient(135deg,rgba(28,43,57,0.95),rgba(17,29,39,0.98));border:1px solid rgba(255,255,255,0.08);border-radius:2rem;padding:2.5rem;box-shadow:var(--shadow-xl),0 0 40px rgba(232,160,32,0.05);overflow:hidden">
           <!-- Background pattern -->
-          <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(217,88,10,0.14) 0%,transparent 50%),radial-gradient(circle at 10% 80%,rgba(232,160,32,0.14) 0%,transparent 50%)"></div>
-
+          <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(217,88,10,0.08) 0%,transparent 60%),radial-gradient(circle at 20% 80%,rgba(13,123,112,0.08) 0%,transparent 60%);opacity:0.6;pointer-events:none"></div>
+          
           <div style="position:relative;z-index:1">
-            <!-- Big stat -->
-            <div style="text-align:center;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.1)">
-              <div style="font-family:'Sora',sans-serif;font-size:5rem;font-weight:800;background:linear-gradient(135deg,#F0B840,#D9580A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1">
+            <!-- Redesigned Main Stat -->
+            <div style="text-align:center;margin-bottom:2.25rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.08)">
+              <div style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;background:rgba(232,160,32,0.1);border:1px solid rgba(232,160,32,0.2);border-radius:1.25rem;margin-bottom:1rem;color:var(--color-blue);box-shadow:0 8px 20px rgba(232,160,32,0.1)">
+                <!-- Hands SVG -->
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div style="font-family:'Sora',sans-serif;font-size:4.5rem;font-weight:900;background:linear-gradient(135deg,var(--color-blue-light) 0%,var(--color-orange) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;letter-spacing:-1px">
                 <span data-count="10000" data-suffix="+" style="font-size:inherit;font-family:inherit;font-weight:inherit">0</span>
               </div>
-              <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;font-weight:600">Happy Customers Served</p>
+              <h3 style="color:white;font-size:1.25rem;font-weight:700;margin-top:0.5rem;letter-spacing:0.02em">Happy Customers Served</h3>
+              <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;margin-top:0.25rem">Delivering expert repair services across the region</p>
             </div>
 
             <!-- Mini stats grid -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
-              <div style="text-align:center">
-                <div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:white"><span data-count="98" data-suffix="%">0</span></div>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Success Rate</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+              <!-- Pod 1: Success Rate -->
+              <div class="stat-pod" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:1.25rem;padding:1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.3s ease,background 0.3s ease,box-shadow 0.3s ease">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;color:#10B981;margin-bottom:0.75rem">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white;line-height:1.2"><span data-count="98" data-suffix="%">0</span></div>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;font-weight:600;margin-top:0.25rem">Success Rate</p>
               </div>
-              <div style="text-align:center">
-                <div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:white"><span data-count="15" data-suffix="yrs">0</span></div>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Experience</p>
+
+              <!-- Pod 2: Experience -->
+              <div class="stat-pod" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:1.25rem;padding:1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.3s ease,background 0.3s ease,box-shadow 0.3s ease">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(232,160,32,0.1);display:flex;align-items:center;justify-content:center;color:var(--color-blue);margin-bottom:0.75rem">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                </div>
+                <div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white;line-height:1.2"><span data-count="15" data-suffix="yrs">0</span></div>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;font-weight:600;margin-top:0.25rem">Experience</p>
               </div>
-              <div style="text-align:center">
-                <div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:white"><span data-count="4.9" data-suffix="★" data-decimals="1">0</span></div>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Avg. Rating</p>
+
+              <!-- Pod 3: Avg Rating -->
+              <div class="stat-pod" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:1.25rem;padding:1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.3s ease,background 0.3s ease,box-shadow 0.3s ease">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(251,191,36,0.1);display:flex;align-items:center;justify-content:center;color:#FBBF24;margin-bottom:0.75rem">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white;line-height:1.2"><span data-count="4.9" data-suffix="★" data-decimals="1">0</span></div>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;font-weight:600;margin-top:0.25rem">Avg. Rating</p>
               </div>
-              <div style="text-align:center">
-                <div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:white"><span data-count="24" data-suffix="hr">0</span></div>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Avg. Turnaround</p>
+
+              <!-- Pod 4: Turnaround -->
+              <div class="stat-pod" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:1.25rem;padding:1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.3s ease,background 0.3s ease,box-shadow 0.3s ease">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(13,123,112,0.1);display:flex;align-items:center;justify-content:center;color:var(--color-teal-light);margin-bottom:0.75rem">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div style="font-family:'Sora',sans-serif;font-size:1.75rem;font-weight:800;color:white;line-height:1.2"><span data-count="24" data-suffix="hr">0</span></div>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;font-weight:600;margin-top:0.25rem">Turnaround</p>
               </div>
             </div>
 
-            <!-- Badges -->
-            <div style="display:flex;gap:0.75rem;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;justify-content:center">
-              <span style="background:rgba(232,160,32,0.2);border:1px solid rgba(232,160,32,0.35);color:#93C5FD;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:600">ISO Certified</span>
-              <span style="background:rgba(217,88,10,0.2);border:1px solid rgba(217,88,10,0.38);color:#FCA55D;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:600">Best Service 2024</span>
-              <span style="background:rgba(16,185,129,0.2);border:1px solid rgba(16,185,129,0.4);color:#6EE7B7;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:600">Top Rated</span>
+            <!-- Redesigned Badges -->
+            <div style="display:flex;gap:0.75rem;margin-top:2.25rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap;justify-content:center">
+              <span style="background:rgba(232,160,32,0.08);border:1px solid rgba(232,160,32,0.25);color:var(--color-blue-light);padding:0.45rem 1.25rem;border-radius:50px;font-size:0.75rem;font-weight:700;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(0,0,0,0.15)">
+                <span style="width:6px;height:6px;border-radius:50%;background:var(--color-blue)"></span> ISO Certified
+              </span>
+              <span style="background:rgba(217,88,10,0.08);border:1px solid rgba(217,88,10,0.25);color:#FCA55D;padding:0.45rem 1.25rem;border-radius:50px;font-size:0.75rem;font-weight:700;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(0,0,0,0.15)">
+                <span style="width:6px;height:6px;border-radius:50%;background:var(--color-orange)"></span> Best Service 2024
+              </span>
+              <span style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);color:#6EE7B7;padding:0.45rem 1.25rem;border-radius:50px;font-size:0.75rem;font-weight:700;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(0,0,0,0.15)">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10B981"></span> Top Rated
+              </span>
             </div>
           </div>
         </div>
@@ -427,7 +488,7 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 4: HOW IT WORKS (SERVICE PROCESS)            -->
+<!-- SECTION 5: HOW IT WORKS (SERVICE PROCESS)            -->
 <!-- ══════════════════════════════════════════════════════ -->
 <section class="section bg-secondary" aria-label="How our repair process works">
   <div class="container">
@@ -437,9 +498,9 @@
       <p class="section-desc">We've made getting your appliance repaired as easy as possible. From booking to delivery, we handle everything.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative" class="stagger-children">
+    <div class="grid grid-4 gap-8 relative stagger-children">
       <!-- Connector line -->
-      <div style="position:absolute;top:32px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--color-blue),var(--color-orange));opacity:0.3;pointer-events:none" aria-hidden="true"></div>
+      <div class="process-line" aria-hidden="true"></div>
 
       <div class="process-card">
         <div class="step-number">01</div>
@@ -481,33 +542,7 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 5: STATS COUNTER                             -->
-<!-- ══════════════════════════════════════════════════════ -->
-<section class="section stats-section" style="background:linear-gradient(135deg,var(--color-navy) 0%,var(--color-navy-light) 100%)" aria-label="Our achievements">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem" class="stagger-children">
-      <div class="stat-card reveal">
-        <div class="stat-number"><span data-count="10000" data-suffix="+">0</span></div>
-        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Repairs Completed</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-2">
-        <div class="stat-number"><span data-count="98" data-suffix="%">0</span></div>
-        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Customer Satisfaction</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-3">
-        <div class="stat-number"><span data-count="15" data-suffix="+">0</span></div>
-        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Years Experience</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-4">
-        <div class="stat-number"><span data-count="50" data-suffix="+">0</span></div>
-        <div class="stat-label" style="color:rgba(255,255,255,0.7)">Expert Technicians</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 6: TESTIMONIALS                              -->
+<!-- SECTION 5: TESTIMONIALS                              -->
 <!-- ══════════════════════════════════════════════════════ -->
 <section class="section" aria-label="Customer testimonials">
   <div class="container">
@@ -529,7 +564,9 @@
         </div>
         <p class="review-text">"My ceiling fan had been making noise for months. FixMaster's technician identified the bearing issue in minutes and had it running silently within an hour. Excellent service!"</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">R</div>
+          <div class="reviewer-avatar">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80" alt="Rajan Krishnan" />
+          </div>
           <div>
             <div class="reviewer-name">Rajan Krishnan</div>
             <div class="reviewer-role">Chennai, Tamil Nadu</div>
@@ -548,7 +585,9 @@
         </div>
         <p class="review-text">"The home pickup service is a game-changer. My geyser was repaired and returned within the same day. The 30-day warranty gave me total peace of mind."</p>
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#D9580A,#B84808)">P</div>
+          <div class="reviewer-avatar">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80" alt="Priya Subramanian" />
+          </div>
           <div>
             <div class="reviewer-name">Priya Subramanian</div>
             <div class="reviewer-role">Coimbatore, Tamil Nadu</div>
@@ -567,7 +606,9 @@
         </div>
         <p class="review-text">"Very professional team. Fixed my mixer grinder issue at a very reasonable price. Technician even cleaned the appliance before returning it. Highly recommended!"</p>
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">A</div>
+          <div class="reviewer-avatar">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Arjun Mehta" />
+          </div>
           <div>
             <div class="reviewer-name">Arjun Mehta</div>
             <div class="reviewer-role">Madurai, Tamil Nadu</div>
@@ -579,7 +620,14 @@
     <!-- Google Rating badge -->
     <div class="text-center mt-8 reveal">
       <div style="display:inline-flex;align-items:center;gap:1rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:1rem;padding:1.25rem 2rem;box-shadow:var(--shadow-md)">
-        <div style="width:48px;height:48px;background:#4285F4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:1.2rem;flex-shrink:0">G</div>
+        <div style="width:48px;height:48px;background:var(--bg-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:inset 0 1px 3px rgba(0,0,0,0.05);border:1px solid var(--border-color)">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+        </div>
         <div style="text-align:left">
           <div style="display:flex;gap:0.2rem;margin-bottom:0.2rem">
             <svg width="16" height="16" fill="#FBBF24" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
