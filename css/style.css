@@ -687,7 +687,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-blue);
+  color: var(--color-orange);
   margin-bottom: 1rem;
 }
 
@@ -714,7 +714,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pricing-period {
   font-size: var(--text-sm);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   display: block;
   margin-top: 0.25rem;
 }
@@ -744,22 +744,26 @@ h1, h2, h3, h4, h5, h6 {
 .pricing-features li svg {
   width: 18px;
   height: 18px;
-  color: #10B981;
+  color: #0A7C57; /* High-contrast emerald green for light cards */
   flex-shrink: 0;
+}
+
+.pricing-card.featured .pricing-features li:not(.disabled) svg {
+  color: #10B981 !important; /* Brighter green on dark background */
 }
 
 .pricing-features li.disabled svg {
   color: #EF4444;
-  opacity: 0.85;
+  opacity: 0.95;
 }
 
 .pricing-features li.disabled span {
-  color: var(--text-muted);
-  opacity: 0.75;
+  color: var(--text-primary);
+  opacity: 0.65;
 }
 
 .pricing-card.featured .pricing-features li.disabled span {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
   opacity: 1 !important;
 }
 
