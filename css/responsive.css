@@ -55,14 +55,41 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
   }
 
-  /* Home2 split hero -> stacked panels */
+  /* 3.5rem stat counters (About milestones) scale with the viewport so
+     they can never push a 2-column card past its box on tablets. */
+  [style*="font-size:3.5rem"] {
+    font-size: clamp(2rem, 7vw, 3.5rem) !important;
+  }
+
+  /* Home2 split hero: the image panel becomes a full-bleed background
+     behind the hero text. The floating service tiles and deco circles
+     are hidden on mobile/tablet, and the image's built-in overlay is
+     deepened so the white text stays readable over the photo. */
   section[aria-label="Hero section"] {
+    position: relative;
     height: auto !important;
     min-height: 100vh;
     grid-template-columns: minmax(0, 1fr) !important;
   }
+  section[aria-label="Hero section"] > div:first-child {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+  }
+  section[aria-label="Hero section"] > div:first-child > div:first-child {
+    display: none !important;
+  }
   section[aria-label="Hero section"] > div:nth-child(2) {
-    min-height: 420px;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0;
+  }
+  section[aria-label="Hero section"] > div:nth-child(2) > div:first-child {
+    background: rgba(17, 29, 39, 0.78) !important;
+  }
+  section[aria-label="Hero section"] [style*="grid-template-columns:1fr 1fr;gap:1.25rem;width:100%;max-width:420px"],
+  section[aria-label="Hero section"] .deco-circle {
+    display: none !important;
   }
 }
 
@@ -91,9 +118,48 @@
     display: none !important;
   }
 
-  /* Home2 hero service tiles -> 1 column */
-  [style*="grid-template-columns:1fr 1fr;gap:1.25rem;width:100%;max-width:420px"] {
+  /* "10000+ Happy Customers Served" dashboard card: tighten the card and
+     pod padding and let the 2x2 stat grid tracks shrink below their
+     min-content so the pods stay inside the card on narrow phones. */
+  .stats-dashboard-card {
+    padding: 1.5rem !important;
+  }
+  .stats-dashboard-card .stat-pod {
+    padding: 1rem !important;
+  }
+  .stats-dashboard-card [style*="grid-template-columns:1fr 1fr;gap:1.25rem"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* 4-up stats / commitment grids (About, Privacy, Sitemap) -> single
+     column so wide counters and text get real room on phones. */
+  [style*="grid-template-columns:repeat(4,1fr)"] {
     grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Blog "Editor's Pick" image overlay: shrink the padding and let the
+     stat chips wrap instead of spilling past the card edge at 320px. */
+  [style*="background:linear-gradient(to top, rgba(15,23,42,0.85), rgba(15,23,42,0.25));display:flex;align-items:flex-end;justify-content:center;padding:2.5rem"] {
+    padding: 1.25rem !important;
+  }
+  [style*="backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0.85rem 2rem"] {
+    flex-wrap: wrap !important;
+    gap: 0.75rem !important;
+    padding: 0.6rem 1rem !important;
+  }
+  [style*="padding-right:1.5rem;border-right:1px solid rgba(255,255,255,0.15)"] {
+    padding-right: 0.75rem !important;
+  }
+
+  /* Privacy / terms intro banners: stack icon, text and button so the
+     text never gets squeezed into a sliver next to the icon. */
+  [style*="padding:2rem 2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.25rem !important;
+    padding: 1.75rem !important;
   }
 
   /* Privacy cookie table rows -> stacked */
