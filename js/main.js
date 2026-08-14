@@ -141,25 +141,34 @@ function initMobileNav() {
     document.body.style.overflow = !isOpen ? 'hidden' : '';
   });
 
+  const closeMenu = () => {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('open');
+    navbar?.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+
   // Close on link click
   mobileNav.querySelectorAll('.mobile-nav-link, .mobile-sub-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('open');
-      navbar?.classList.remove('menu-open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // Close on outside click
   document.addEventListener('click', (e) => {
     if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('open');
-      navbar?.classList.remove('menu-open');
-      document.body.style.overflow = '';
+      closeMenu();
     }
   });
+
+  // Close when the viewport grows back to desktop so the drawer never
+  // stays open (and never keeps body scroll locked) after resizing
+  const desktopMq = window.matchMedia('(min-width: 1025px)');
+  const handleDesktop = (e) => { if (e.matches) closeMenu(); };
+  if (typeof desktopMq.addEventListener === 'function') {
+    desktopMq.addEventListener('change', handleDesktop);
+  } else {
+    desktopMq.addListener(handleDesktop);
+  }
 }
 
 // ── 4. THEME (DARK / LIGHT) ───────────────────────────────

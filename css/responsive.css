@@ -7,6 +7,13 @@
    content (counters, stat cards) can never push the track past the screen.
    ========================================================================== */
 
+/* ============ Desktop (min-width: 1025px) ============ */
+/* Safety net: the mobile drawer must never be visible at desktop widths,
+   even if it was left open before the viewport was resized. */
+@media (min-width: 1025px) {
+  .mobile-nav { display: none !important; }
+}
+
 /* ============ Narrow desktop windows (1025-1100px) ============ */
 /* The full desktop navbar needs ~1046px to fit. In short desktop windows
    give it slightly tighter spacing so the Book Repair button never clips
