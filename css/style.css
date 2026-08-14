@@ -748,8 +748,20 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
 }
 
-.pricing-features li.disabled svg { color: #EF4444; opacity: 0.5; }
-.pricing-features li.disabled span { opacity: 0.4; }
+.pricing-features li.disabled svg {
+  color: #EF4444;
+  opacity: 0.85;
+}
+
+.pricing-features li.disabled span {
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.pricing-card.featured .pricing-features li.disabled span {
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
 
 /* Process Step Card */
 .process-card {
