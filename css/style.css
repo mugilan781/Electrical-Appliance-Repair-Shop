@@ -1876,7 +1876,7 @@ select.form-control {
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.75rem 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
 }
 
 .footer-bottom p {
