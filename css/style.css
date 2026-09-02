@@ -664,7 +664,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid var(--border-color);
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   transition: all var(--transition-base);
 }
 
@@ -684,15 +684,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .pricing-badge {
   position: absolute;
-  top: 1.25rem;
-  right: -2rem;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--color-orange);
   color: white;
-  font-size: var(--text-xs);
-  font-weight: 700;
-  padding: 0.3rem 3rem;
-  transform: rotate(45deg);
-  letter-spacing: 0.05em;
+  font-size: 0.725rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 1.15rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+  white-space: nowrap;
+  z-index: 10;
 }
 
 .pricing-plan-name {
