@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    ELECTRICAL APPLIANCE REPAIR SHOP — MAIN JS
    Navbar | Dark Mode | RTL | Scroll Reveal | Counters |
    FAQ | Tabs | Floating CTA | Cookie Banner | Preloader
@@ -148,8 +148,8 @@ function initMobileNav() {
     document.body.style.overflow = '';
   };
 
-  // Close on link click
-  mobileNav.querySelectorAll('.mobile-nav-link, .mobile-sub-link').forEach(link => {
+  // Close on link click (including Book Repair CTA button)
+  mobileNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
@@ -431,6 +431,22 @@ function initPageTransition() {
       const href = link.getAttribute('href');
       if (!href || href.startsWith('javascript') || href.startsWith('http')) return;
 
+      // Handle same-page anchor links like services.html#booking when already on services.html
+      if (href.includes('#')) {
+        const [targetPage, targetHash] = href.split('#');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        if (targetPage === currentPage || (targetPage === '' && targetHash)) {
+          const el = document.getElementById(targetHash);
+          if (el) {
+            e.preventDefault();
+            const offset = 80;
+            const top = el.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+            return;
+          }
+        }
+      }
+
       e.preventDefault();
 
       const overlay = document.createElement('div');
@@ -448,7 +464,7 @@ function initPageTransition() {
           <div style="width:150px;height:2px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;margin:0 auto">
             <div style="height:100%;background:linear-gradient(90deg,#E8A020,#D9580A);border-radius:2px;animation:pageLoad 0.4s ease forwards" id="ptBar"></div>
           </div>
-          <div style="margin-top:1rem;color:white;font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:0.02em">FixMaster</div>
+          <div style="margin-top:1rem;color:white;font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.02em">FixMaster</div>
         </div>
       `;
       document.body.appendChild(overlay);
