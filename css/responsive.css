@@ -55,7 +55,11 @@
     order: 0 !important;
     width: 100% !important;
   }
-  .sidebar-categories-widget,
+  .sidebar-categories-widget {
+    order: 1 !important;
+    width: 100% !important;
+    margin-top: 3.5rem !important;
+  }
   .sidebar-recent-widget,
   .sidebar-promo-widget {
     order: 1 !important;
@@ -171,18 +175,23 @@
     gap: 1.25rem !important;
   }
 
-  /* Blog "Editor's Pick" image overlay: shrink the padding and let the
-     stat chips wrap instead of spilling past the card edge at 320px. */
-  [style*="background:linear-gradient(to top, rgba(15,23,42,0.85), rgba(15,23,42,0.25));display:flex;align-items:flex-end;justify-content:center;padding:2.5rem"] {
-    padding: 1.25rem !important;
+  /* Featured blog card stats pill on mobile (320px - 480px) */
+  .featured-img-overlay {
+    padding: 1rem 0.75rem !important;
   }
-  [style*="backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0.85rem 2rem"] {
-    flex-wrap: wrap !important;
-    gap: 0.75rem !important;
-    padding: 0.6rem 1rem !important;
+  .featured-stats-pill {
+    padding: 0.65rem 0.4rem !important;
+    border-radius: 1rem !important;
+    max-width: 100% !important;
   }
-  [style*="padding-right:1.5rem;border-right:1px solid rgba(255,255,255,0.15)"] {
-    padding-right: 0.75rem !important;
+  .featured-stat-item {
+    padding: 0 0.2rem !important;
+  }
+  .featured-stat-item .stat-val {
+    font-size: 1.05rem !important;
+  }
+  .featured-stat-item .stat-lbl {
+    font-size: 0.7rem !important;
   }
 
   /* Privacy / terms intro banners: stack icon, text and button so the
@@ -208,6 +217,11 @@
   /* Giant 4.5rem stat counter must fit a phone screen */
   [style*="font-size:4.5rem"] {
     font-size: clamp(2.25rem, 10vw, 4.5rem) !important;
+  }
+
+  /* Blog categories card top margin on small mobile (320px - 360px) */
+  .sidebar-categories-widget {
+    margin-top: 2.75rem !important;
   }
 
   /* Blog search widget & filter bar on narrow screens (360px) */
