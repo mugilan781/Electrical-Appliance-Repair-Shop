@@ -3135,5 +3135,31 @@ select.form-control {
   display: block;
 }
 
+/* ── BLOG PAGE LAYOUT ───────────────────────────────────────── */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.blog-main-content {
+  min-width: 0;
+}
+
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.blog-sidebar .sidebar-widget {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
 /* ── END OF STYLE.CSS ─────────────────────────────────────── */
 

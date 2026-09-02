@@ -37,6 +37,31 @@
      starts flush below the bar (64px == the .navbar.scrolled height). */
   :root { --navbar-height: 64px; }
 
+  /* Blog layout on mobile & tablet: Search box aligns at the top of the page/grid */
+  .blog-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .blog-sidebar {
+    display: contents !important;
+  }
+  .sidebar-search-widget {
+    order: -1 !important;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+  }
+  .blog-main-content {
+    order: 0 !important;
+    width: 100% !important;
+  }
+  .sidebar-categories-widget,
+  .sidebar-recent-widget,
+  .sidebar-promo-widget {
+    order: 1 !important;
+    width: 100% !important;
+  }
+
   /* Stack sidebar layouts (blog sidebar, policy TOC, booking/info columns) */
   [style*="grid-template-columns:1fr 300px"],
   [style*="grid-template-columns:1fr 320px"],
@@ -183,5 +208,19 @@
   /* Giant 4.5rem stat counter must fit a phone screen */
   [style*="font-size:4.5rem"] {
     font-size: clamp(2.25rem, 10vw, 4.5rem) !important;
+  }
+
+  /* Blog search widget & filter bar on narrow screens (360px) */
+  .sidebar-search-widget {
+    padding: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .blog-filter-bar {
+    gap: 0.4rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+  .filter-btn {
+    padding: 0.45rem 1rem !important;
+    font-size: 0.8rem !important;
   }
 }
