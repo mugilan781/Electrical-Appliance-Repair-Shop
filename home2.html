@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -54,37 +54,37 @@
 <!-- ══════════════════════════════════════════════════════ -->
 <section style="height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden" aria-label="Hero section">
   <!-- Left: Text -->
-  <div style="background:linear-gradient(135deg,var(--color-navy-dark) 0%,var(--color-navy) 100%);padding:calc(3rem + var(--navbar-height)) var(--container-pad) 3rem calc(max((100vw - 1280px)/2, var(--container-pad)));display:flex;align-items:center;position:relative;overflow:hidden">
-    <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(232,160,32,0.14) 0%,transparent 50%),radial-gradient(circle at 90% 10%,rgba(217,88,10,0.1) 0%,transparent 50%)"></div>
+  <div class="split-hero-content" style="padding:calc(3rem + var(--navbar-height)) var(--container-pad) 3rem calc(max((100vw - 1280px)/2, var(--container-pad)));display:flex;align-items:center;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(234,88,12,0.08) 0%,transparent 50%),radial-gradient(circle at 90% 10%,rgba(13,123,112,0.06) 0%,transparent 50%)"></div>
     <div style="position:relative;z-index:1;max-width:550px">
       <span class="section-tag" style="margin-bottom:1rem;display:inline-flex">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         FixMaster — Since 2009
       </span>
-      <h1 class="anim-fadeInUp" style="font-family:'Sora',sans-serif;font-size:clamp(1.75rem,3.5vw,3rem);font-weight:800;color:white;line-height:1.1;margin-bottom:1rem;letter-spacing:-0.02em">
+      <h1 class="anim-fadeInUp" style="font-family:'Sora',sans-serif;font-size:clamp(1.75rem,3.5vw,3rem);font-weight:800;color:var(--text-primary);line-height:1.1;margin-bottom:1rem;letter-spacing:-0.02em">
         Your Appliances Deserve <span style="color:var(--color-orange)">Expert Care</span>
       </h1>
-      <p class="anim-fadeInUp anim-delay-2" style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem">
+      <p class="anim-fadeInUp anim-delay-2" style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem">
         From fans to geysers, we repair all electrical appliances with factory-level precision. 15+ years of trusted service in Tamil Nadu.
       </p>
 
       <!-- Rating bar -->
-      <div class="anim-fadeInUp anim-delay-3" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:0.875rem;padding:0.875rem 1rem;margin-bottom:1.25rem;backdrop-filter:blur(10px)">
+      <div class="anim-fadeInUp anim-delay-3" style="background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:0.875rem;padding:0.875rem 1rem;margin-bottom:1.25rem;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
-          <span style="color:rgba(255,255,255,0.7);font-size:0.8rem">Customer Satisfaction</span>
-          <span style="color:white;font-weight:700;font-size:0.875rem">98%</span>
+          <span style="color:var(--text-secondary);font-size:0.8rem">Customer Satisfaction</span>
+          <span style="color:var(--text-primary);font-weight:700;font-size:0.875rem">98%</span>
         </div>
         <div class="progress-bar"><div class="progress-fill" data-width="98%" style="width:0%"></div></div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem;margin-bottom:0.5rem">
-          <span style="color:rgba(255,255,255,0.7);font-size:0.8rem">On-Time Delivery</span>
-          <span style="color:white;font-weight:700;font-size:0.875rem">95%</span>
+          <span style="color:var(--text-secondary);font-size:0.8rem">On-Time Delivery</span>
+          <span style="color:var(--text-primary);font-weight:700;font-size:0.875rem">95%</span>
         </div>
         <div class="progress-bar"><div class="progress-fill" data-width="95%" style="width:0%"></div></div>
       </div>
 
       <div class="anim-fadeInUp anim-delay-4" style="display:flex;gap:1rem;flex-wrap:wrap">
         <a href="services.html#booking" class="btn btn-orange btn-lg">Book a Repair</a>
-        <a href="services.html" class="btn btn-ghost btn-lg">Our Services</a>
+        <a href="services.html" class="btn btn-secondary btn-lg">Our Services</a>
       </div>
     </div>
   </div>
