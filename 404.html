@@ -19,10 +19,10 @@
 
   <div style="text-align:center;position:relative;z-index:1;max-width:700px;margin-inline:auto">
     <!-- 404 number -->
-    <div style="font-family:'Sora',sans-serif;font-size:clamp(7rem,20vw,14rem);font-weight:900;line-height:1;background:linear-gradient(135deg,#F0B840,#60A5FA,#D9580A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.05em;animation:fadeInUp 0.6s ease" aria-label="404">404</div>
+    <div style="font-family:'Sora',sans-serif;font-size:clamp(7rem,20vw,14rem);font-weight:900;line-height:1;background:linear-gradient(135deg,var(--color-orange-light),var(--color-orange),var(--color-orange-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.05em;animation:fadeInUp 0.6s ease" aria-label="404">404</div>
 
     <h1 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,4vw,2.5rem);font-weight:800;color:white;margin-bottom:1rem;line-height:1.2">Oops! This Page Isn't Working</h1>
-    <p style="color:rgba(255,255,255,0.65);font-size:1.05rem;line-height:1.75;margin-bottom:2.5rem;max-width:500px;margin-inline:auto">Just like a broken appliance, this page needs some attention. The page you're looking for doesn't exist or has been moved.</p>
+    <p style="color:rgba(255,255,255,0.85);font-size:1.05rem;line-height:1.75;margin-bottom:2.5rem;max-width:500px;margin-inline:auto">Just like a broken appliance, this page needs some attention. The page you're looking for doesn't exist or has been moved.</p>
 
     <!-- CTA buttons -->
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem">
@@ -35,8 +35,8 @@
 
     <!-- Redirect Countdown -->
     <div id="redirect-container" class="reveal">
-      <p style="color:rgba(255,255,255,0.65);font-size:0.9rem">You'll be automatically redirected to the homepage in <span id="countdown" style="font-weight:700;color:#F0B840">15</span> seconds.</p>
-      <button onclick="clearInterval(window.countdownInterval);document.getElementById('redirect-container').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.55);font-size:0.8rem;cursor:pointer;text-decoration:underline;margin-top:0.5rem">Cancel redirect</button>
+      <p style="color:rgba(255,255,255,0.85);font-size:0.9rem">You'll be automatically redirected to the homepage in <span id="countdown" style="font-weight:700;color:var(--color-orange-light)">15</span> seconds.</p>
+      <button onclick="clearInterval(window.countdownInterval);document.getElementById('redirect-container').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.75);font-size:0.8rem;cursor:pointer;text-decoration:underline;margin-top:0.5rem">Cancel redirect</button>
     </div>
   </div>
 </section>

@@ -6,9 +6,54 @@
 /* Base color token overrides are in :root [data-theme="dark"] inside style.css */
 
 /* ── NAVBAR ──────────────────────────────────────────────── */
+[data-theme="dark"] .navbar {
+  background: rgba(11, 19, 27, 0.94);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
 [data-theme="dark"] .navbar.scrolled {
-  background: rgba(7,14,20,0.97);
-  border-bottom-color: rgba(255,255,255,0.06);
+  background: rgba(7, 14, 20, 0.97);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .navbar-logo .logo-name {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .navbar-logo .logo-tagline {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme="dark"] .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="dark"] .navbar-nav .nav-link:hover,
+[data-theme="dark"] .navbar-nav .nav-link.active {
+  color: var(--color-orange-light);
+  background: rgba(234, 88, 12, 0.16);
+}
+
+[data-theme="dark"] .navbar-controls .ctrl-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .navbar-controls .ctrl-btn:hover {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .hamburger {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+[data-theme="dark"] .hamburger span {
+  background: #FFFFFF;
 }
 
 /* ── CARDS & SURFACES ────────────────────────────────────── */
@@ -22,9 +67,55 @@
 [data-theme="dark"] .cert-card,
 [data-theme="dark"] .card,
 [data-theme="dark"] .highlight-card,
-[data-theme="dark"] .sidebar-promo-widget {
+[data-theme="dark"] .sidebar-promo-widget,
+[data-theme="dark"] .policy-toc,
+[data-theme="dark"] .policy-section,
+[data-theme="dark"] .sitemap-group {
   background: #162433;
-  border-color: rgba(255,255,255,0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .policy-toc a,
+[data-theme="dark"] .sitemap-link {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .policy-toc a:hover,
+[data-theme="dark"] .sitemap-link:hover {
+  color: var(--color-orange-light);
+}
+
+[data-theme="dark"] .policy-section p,
+[data-theme="dark"] .policy-section ul,
+[data-theme="dark"] .policy-section li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .policy-highlight {
+  background: rgba(234, 88, 12, 0.14);
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .tip-box {
+  background: rgba(13, 123, 112, 0.15);
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .warning-box {
+  background: rgba(234, 88, 12, 0.15);
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .article-body,
+[data-theme="dark"] .article-body p,
+[data-theme="dark"] .article-body ul,
+[data-theme="dark"] .article-body li {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .article-body blockquote {
+  background: #111C27;
   color: #F8FAFC;
 }
 
