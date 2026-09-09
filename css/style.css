@@ -1231,9 +1231,9 @@ select.form-control {
   position: absolute;
   inset: 0;
   background: linear-gradient(110deg,
-    rgba(17,29,39,0.92) 0%,
-    rgba(17,29,39,0.78) 50%,
-    rgba(17,29,39,0.55) 100%
+    rgba(17,29,39,0.95) 0%,
+    rgba(17,29,39,0.85) 50%,
+    rgba(17,29,39,0.65) 100%
   );
   pointer-events: none;
 }
@@ -1283,7 +1283,6 @@ select.form-control {
   line-height: 1.1;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-title span { color: var(--color-orange); }
@@ -1297,7 +1296,6 @@ select.form-control {
   max-width: 520px;
   margin-inline: auto;
   font-weight: 400;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 .hero-cta {
@@ -1322,7 +1320,6 @@ select.form-control {
   color: rgba(255,255,255,0.85);
   font-size: var(--text-sm);
   font-weight: 450;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero-meta-item svg { width: 18px; height: 18px; color: var(--color-orange); }
